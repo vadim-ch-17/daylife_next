@@ -1,0 +1,63 @@
+//Libraries
+@import "./libs//animate.css";
+
+//Variables
+@import "./variables/variables";
+
+@import "./settings/layouts";
+
+$stroke: var(--stroke);
+$stroke-miterlimit: var(--stroke-miterlimit);
+$stroke-width: var(--stroke-width);
+$stroke-width-active: var(--stroke-width-active);
+$fill-rule: evenodd;
+$fill: var(--fill);
+$stroke-dashoffset: var(--stroke-dashoffset);
+$stroke-dasharray: var(--stroke-dasharray);
+$stroke-dasharray-active: var(--stroke-dasharray-active);
+$transition-time: var(--transition);
+.arrow-container {
+    .svg.bottom {
+        stroke: $stroke;
+        stroke-miterlimit: $stroke-miterlimit;
+        stroke-width: $stroke-width;
+        fill-rule: $fill-rule;
+        fill: $fill;
+    }
+    .svg.bottom .svg-elem-1 {
+        stroke-dashoffset: $stroke-dashoffset;
+        stroke-dasharray: $stroke-dasharray;
+        fill: $fill;
+        stroke-width: $stroke-width;
+        -webkit-transition: stroke-dashoffset 0.7s linear $transition-time;
+        transition: stroke-dashoffset 0.7s linear $transition-time;
+    }
+
+    .svg.bottom.active .svg-elem-1 {
+        stroke-dashoffset: $stroke-dasharray-active;
+    }
+
+    .svg.bottom .svg-elem-2 {
+        stroke-dashoffset: $stroke-dashoffset;
+        stroke-dasharray: $stroke-dasharray;
+        fill: $fill;
+        stroke-width: $stroke-width;
+        -webkit-transition: stroke-dashoffset 0.7s linear $transition-time;
+        transition: stroke-dashoffset 0.7s linear $transition-time;
+    }
+
+    .svg.bottom.active .svg-elem-2 {
+        stroke-dashoffset: $stroke-dasharray-active;
+    }
+    .svg.bottom .svg-elem-3 {
+        stroke-dashoffset: $stroke-dashoffset;
+        stroke-dasharray: $stroke-dasharray;
+        fill: $fill;
+        stroke-width: $stroke-width;
+        -webkit-transition: stroke-dashoffset 0.7s linear $transition-time;
+        transition: stroke-dashoffset 0.7s linear $transition-time;
+    }
+    .svg.bottom.active .svg-elem-3 {
+        stroke-dashoffset: $stroke-dasharray-active;
+    }
+}

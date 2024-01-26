@@ -1,27 +1,45 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { useTranslation } from 'next-i18next'
-import Cookies from 'js-cookie';
-import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import Cookies from "js-cookie";
+import { useEffect, useState } from "react";
+// import WOW from "wowjs";
 import Header from "@/components/Header";
-const inter = Inter({ subsets: ["latin"] });
-
+import Footer from "@/components/Footer";
+import Banner from "@/sections/Banner";
+import Advantages from "@/sections/Advantages";
+import TopSection from "@/sections/CallToActionSections/TopSection";
+import Product from "@/sections/Product";
+import BottomSection from "@/sections/CallToActionSections/BottomSection";
 
 export default function Home() {
-
-  const { t } = useTranslation('common')
+  const [WOW, setWOW] = useState(null);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      import("wowjs").then((wowjs) => {
+        setWOW(wowjs);
+        new wowjs.WOW({
+          boxClass: "wow",
+          offset: 100,
+          mobile: false,
+          live: true,
+          callback: function (box) {},
+          scrollContainer: null,
+          resetAnimation: true,
+        }).init();
+      });
+    }
+  }, []);
   return (
     <>
       <Header />
-      <main
-        className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-      >
-        <LanguageSwitcher />
-        <h1 className="text-4xl font-bold text-center">{t('title')}</h1>
+      <main className={`main`}>
+        <Banner />
+        <Advantages />
+        <TopSection />
+        <Product />
+        <BottomSection />
       </main>
+      <Footer />
     </>
-
   );
 }
 
@@ -30,7 +48,15 @@ export async function getStaticProps({ locale }) {
 
   return {
     props: {
-      ...(await serverSideTranslations(selectedLanguage, ['common', 'navigation'])),
+      ...(await serverSideTranslations(selectedLanguage, [
+        "common",
+        "navigation",
+        "button",
+        "banner",
+        "advantages",
+        "action-sections",
+        "product",
+      ])),
     },
   };
 }

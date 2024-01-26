@@ -1,0 +1,42 @@
+@import "./libs//animate.css";
+.container {
+  max-width: 1200px !important;
+}
+
+.arrow-container .svg.bottom {
+  stroke: var(--stroke);
+  stroke-miterlimit: var(--stroke-miterlimit);
+  stroke-width: var(--stroke-width);
+  fill-rule: evenodd;
+  fill: var(--fill);
+}
+.arrow-container .svg.bottom .svg-elem-1 {
+  stroke-dashoffset: var(--stroke-dashoffset);
+  stroke-dasharray: var(--stroke-dasharray);
+  fill: var(--fill);
+  stroke-width: var(--stroke-width);
+  transition: stroke-dashoffset 0.7s linear var(--transition);
+}
+.arrow-container .svg.bottom.active .svg-elem-1 {
+  stroke-dashoffset: var(--stroke-dasharray-active);
+}
+.arrow-container .svg.bottom .svg-elem-2 {
+  stroke-dashoffset: var(--stroke-dashoffset);
+  stroke-dasharray: var(--stroke-dasharray);
+  fill: var(--fill);
+  stroke-width: var(--stroke-width);
+  transition: stroke-dashoffset 0.7s linear var(--transition);
+}
+.arrow-container .svg.bottom.active .svg-elem-2 {
+  stroke-dashoffset: var(--stroke-dasharray-active);
+}
+.arrow-container .svg.bottom .svg-elem-3 {
+  stroke-dashoffset: var(--stroke-dashoffset);
+  stroke-dasharray: var(--stroke-dasharray);
+  fill: var(--fill);
+  stroke-width: var(--stroke-width);
+  transition: stroke-dashoffset 0.7s linear var(--transition);
+}
+.arrow-container .svg.bottom.active .svg-elem-3 {
+  stroke-dashoffset: var(--stroke-dasharray-active);
+}/*# sourceMappingURL=styles.css.map */

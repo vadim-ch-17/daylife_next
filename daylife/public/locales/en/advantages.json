@@ -1,0 +1,18 @@
+{
+    "title": "Advantages",
+    "description": "What will you get",
+    "cards": [
+        {
+            "title": "Journal of nutrition",
+            "image": "/assets/images/advantages/journal.webp"
+        },
+        {
+            "title": "Detailed reports",
+            "image": "/assets/images/advantages/detailed.webp"
+        },
+        {
+            "title": "Convenient reminders",
+            "image": "/assets/images/advantages/convenient.webp"
+        }
+    ]
+}
