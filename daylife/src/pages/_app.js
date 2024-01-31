@@ -1,7 +1,11 @@
 import "@/styles/globals.css";
-// import "animate.css/animate.min.css";
+import { AppProvider } from "@/utils/context";
 import { appWithTranslation } from "next-i18next";
 function App({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return (
+    <AppProvider>
+      <Component {...pageProps} />
+    </AppProvider>
+  );
 }
 export default appWithTranslation(App);

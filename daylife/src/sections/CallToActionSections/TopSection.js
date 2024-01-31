@@ -91,7 +91,7 @@ const TopSection = () => {
               data-rellax-min="0"
             >
               <img
-                className="lazy absolute top-0 max-h-[485px] lg:-top-1/6 lg:right-0 lg:translate-x-0 xl:-top-2/6"
+                className="lazy absolute top-0 max-h-[485px] lg:-top-[9rem] lg:right-0 lg:translate-x-0 xl:-top-2/6"
                 loading="lazy"
                 src={t("topSection.image")}
                 alt="phone"

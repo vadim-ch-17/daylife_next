@@ -1,0 +1,58 @@
+{
+    "download": {
+        "title": "Скачайте приложение!",
+        "images": [
+            {
+                "src": "/assets/images/popups/qr.webp",
+                "alt": "Download on the App Store",
+                "link": "https://itunes.apple.com/us/app/your-app-name/id123456789?ls=1&mt=8"
+            },
+            {
+                "src": "/assets/images/popups/qr.webp",
+                "alt": "Get it on Google Play",
+                "link": "https://play.google.com/store/apps/details?id=com.your.app"
+            }
+        ]
+    },
+    "form": {
+        "title": "Расскажите нам о ваших потребностях",
+        "inputs": [
+            {
+                "type": "text",
+                "name": "user-name",
+                "placeholder": "Имя",
+                "required": true
+            },
+            {
+                "type": "email",
+                "name": "user-email",
+                "placeholder": "Электронная почта",
+                "required": true
+            },
+            {
+                "type": "textarea",
+                "name": "user-message",
+                "placeholder": "Ваше сообщение",
+                "required": false
+            },
+            {
+                "type": "submit",
+                "value": "Отправить",
+                "required": true
+            }
+        ],
+        "image": {
+            "src": "/assets/images/popups/send_msg.webp",
+            "alt": "Send us a message"
+        }
+    },
+    "success": {
+        "title": "Спасибо!",
+        "subtitle": "Ваше сообщение было отправлено успешно",
+        "button": "OK",
+        "image": {
+            "src": "/assets/images/popups/thank_you_page.webp",
+            "alt": "Success"
+        }
+    }
+}

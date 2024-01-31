@@ -1,24 +1,25 @@
 const navList = [
-    {
-        name: 'features',
-        path: '/#',
-        active: true
-    },
-    {
-        name: 'product',
-        path: '/#',
-        active: true
-    },
-    {
-        name: 'testimonials',
-        path: '/#',
-        active: false
-    },
-    {
-        name: 'contact_us',
-        path: '/#',
-        active: true
-    },
-]
+  {
+    name: "features",
+    path: "features",
+    active: true,
+  },
+  {
+    name: "product",
+    path: "product",
+    active: true,
+  },
+  {
+    name: "testimonials",
+    path: "testimonials",
+    active: false,
+  },
+  {
+    name: "contact_us",
+    path: "#",
+    active: true,
+    modal: true,
+  },
+];
 
 export default navList;

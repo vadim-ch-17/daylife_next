@@ -7,11 +7,11 @@ export default function Document() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Reem+Kufi:wght@4200;300;400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Reem+Kufi:wght@200;300;400;500;600;700&display=swap"
           rel="stylesheet"
         />
       </Head>
-      <body className="font-manrope">
+      <body className="relative font-manrope">
         <Main />
         <NextScript />
       </body>

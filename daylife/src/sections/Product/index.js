@@ -2,12 +2,20 @@ import Star from "@/components/Star";
 import { useTranslation } from "next-i18next";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Button from "@/components/Button";
+import { useModal } from "@/utils/context";
 
 const Product = () => {
   const { t } = useTranslation(["product", "button"]);
   const cards = t("cards", { returnObjects: true });
+  const { setModalBody, setIsOpenModal } = useModal();
+
+  const handleOpenModal = () => {
+    setModalBody("Download");
+    setIsOpenModal(true);
+  };
+
   return (
-    <div className="container mb-[5rem]">
+    <div id="product" className="container mb-[5rem]">
       <div className="mb-[3.875rem] text-center">
         <h2
           className="wow fadeIn text-base font-medium text-metal"
@@ -130,6 +138,7 @@ const Product = () => {
                   data-wow-delay="0.5s"
                 >
                   <Button
+                    onClick={handleOpenModal}
                     classes="btn download-app large dark h-[3.125rem] !px-[1.4rem] text-white transition-colors md:h-[4.125rem] md:!px-[2rem]"
                     type={"primary"}
                   >

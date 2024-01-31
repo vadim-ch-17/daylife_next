@@ -20,11 +20,11 @@ module.exports = {
         lg: "992px",
         xl: "1200px",
         "2xl": "1400px",
-        minsm: { min: "577px" },
-        minmd: { min: "769px" },
-        minlg: { min: "993px" },
-        minxl: { min: "1201px" },
-        min2xl: { min: "1401px" },
+        // minsm: { min: "577px" },
+        // minmd: { min: "769px" },
+        // minlg: { min: "993px" },
+        // minxl: { min: "1201px" },
+        // min2xl: { min: "1401px" },
       },
       minHeight: {
         xxs: "24.125rem",
@@ -53,16 +53,7 @@ module.exports = {
         360: "22.5rem",
         460: "28.75rem",
       },
-      inset: {
-        "1/1": "10%",
-        "1/2": "20%",
-        "1/3": "30%",
-        "1/35": "35%",
-        "1/5": "40%",
-        "1/6": "45%",
-        "2/5": "60%",
-        "2/6": "70%",
-      },
+
       transitionProperty: {
         gridRows: "grid-template-rows",
       },
@@ -242,6 +233,7 @@ module.exports = {
         metallight: "#9FA0B7",
         gold: "#FAC250",
         active: "#6771E4",
+        visited: "#6874DC",
         gray: "#4A4F5B",
         lightgray: "#AEB5C6",
       },
@@ -263,6 +255,8 @@ module.exports = {
       zIndex: {
         under: "-1",
         z4: "4",
+        40: "40",
+        100: "100",
       },
       keyframes: {
         zIndex: {
@@ -281,6 +275,18 @@ module.exports = {
             transform: "translateY(0px)",
           },
         },
+        topLabel: {
+          from: {
+            top: "1.00rem",
+            color: "#949cb6",
+            "font-size": "0.875rem"
+          },
+          to: {
+            top: "-0.5rem",
+            "font-size": "0.625rem",
+            color: "#6874dc"
+          }
+        }
       },
       animation: {
         zIndex: "0.7s linear 0.5s zIndex forwards",

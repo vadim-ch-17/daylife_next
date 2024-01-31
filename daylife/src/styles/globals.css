@@ -19,3 +19,6 @@
 @tailwind utilities;
 
 @import "./inc/styles.css";
+.img-parallax {
+  transition: transform 6s cubic-bezier(0, 1, 0.5, 1);
+}

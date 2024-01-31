@@ -7,7 +7,7 @@ const { default: StoreButtons } = require("@/components/StoreButtons");
 const BottomSection = () => {
   const { t } = useTranslation("action-sections");
   return (
-    <div className="mb-[0rem] bg-secondary pb-[1.375rem] pt-[2.813rem] xl:pb-[7.063rem] xl:pt-[7.063rem]">
+    <div className="mb-[2.875rem] bg-secondary pb-[1.375rem] pt-[2.813rem] lg:mb-[6.125rem] xl:pb-[7.063rem] xl:pt-[7.063rem]">
       <div className="container relative mx-auto flex grid-cols-3 flex-col items-center px-3 lg:grid">
         <div className=" relative order-3 lg:order-1">
           <picture>

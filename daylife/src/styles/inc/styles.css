@@ -39,4 +39,47 @@
 }
 .arrow-container .svg.bottom.active .svg-elem-3 {
   stroke-dashoffset: var(--stroke-dasharray-active);
+}
+
+.popup.animate .animation-checkmark svg {
+  display: block;
+  height: 100px;
+  width: 100px;
+  color: #494b7d;
+}
+.popup.animate .animation-checkmark .circle {
+  stroke-dasharray: 76;
+  stroke-dashoffset: 76;
+  animation: draw 0.5s forwards;
+}
+.popup.animate .animation-checkmark .tick {
+  stroke-dasharray: 18;
+  stroke-dashoffset: 18;
+  animation: draw 0.5s forwards 0.5s;
+}
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.popup.animate .animation-checkmark .pulse {
+  width: 100px;
+  height: 100px;
+  background: transparent;
+  border-radius: 50%;
+  animation: pulse 1.7s ease-in-out infinite;
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(73, 75, 125, 0.91), 0 0 0 0 rgba(73, 75, 125, 0.91);
+  }
+  40% {
+    box-shadow: 0 0 0 50px rgba(255, 158, 74, 0), 0 0 0 0 rgba(73, 75, 125, 0.91);
+  }
+  80% {
+    box-shadow: 0 0 0 50px rgba(255, 158, 74, 0), 0 0 0 30px rgba(255, 158, 74, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 158, 74, 0), 0 0 0 30px rgba(255, 158, 74, 0);
+  }
 }/*# sourceMappingURL=styles.css.map */
