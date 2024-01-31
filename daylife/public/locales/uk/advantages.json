@@ -1,18 +1,27 @@
 {
-    "title": "Advantages",
-    "description": "What will you get",
+    "title": "Переваги",
+    "description": "Що ви отримаєте",
     "cards": [
         {
             "title": "Журнал харчування",
-            "image": "/assets/images/advantages/journal.webp"
+            "image": {
+                "src": "/assets/images/advantages/journal.webp",
+                "alt": "Журнал харчування"
+            }
         },
         {
             "title": "Докладні звіти",
-            "image": "/assets/images/advantages/detailed.webp"
+            "image": {
+                "src": "/assets/images/advantages/detailed.webp",
+                "alt": "Докладні звіти"
+            }
         },
         {
             "title": "Зручні нагадування",
-            "image": "/assets/images/advantages/convenient.webp"
+            "image": {
+                "src": "/assets/images/advantages/convenient.webp",
+                "alt": "Зручні нагадування"
+            }
         }
     ]
 }

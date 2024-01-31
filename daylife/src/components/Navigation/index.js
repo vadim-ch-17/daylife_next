@@ -21,8 +21,8 @@ const Navigation = ({
 
   const toAnchor = (e) => {
     e.preventDefault();
-    const href = e.target.getAttribute("href");
-    const element = document.querySelector("#" + href.substring(1));
+    const href = e.target.dataset.anchor;
+    const element = document.querySelector("#" + href);
 
     if (element) {
       const top = element.offsetTop;
@@ -31,7 +31,7 @@ const Navigation = ({
         behavior: "smooth",
       });
     } else {
-      console.error(`Element with selector "${href.substring(1)}" not found`);
+      console.error(`Element with selector "${href}" not found`);
     }
   };
   const openModal = (e) => {
@@ -52,6 +52,7 @@ const Navigation = ({
               <Link
                 href={item.path}
                 onClick={item?.modal ? openModal : toAnchor}
+                data-anchor={item?.path}
                 className={`nav-link link flex h-full items-center text-base uppercase transition-colors focus:outline-none ${typeLinks && styleItems[typeLinks] ? styleItems[typeLinks] : ""} ${classLink ? classLink : ""}`}
               >
                 {t(item.name)}

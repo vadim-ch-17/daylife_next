@@ -4,15 +4,24 @@
     "cards": [
         {
             "title": "Journal of nutrition",
-            "image": "/assets/images/advantages/journal.webp"
+            "image": {
+                "src": "/assets/images/advantages/journal.webp",
+                "alt": "Journal of nutrition"
+            }
         },
         {
             "title": "Detailed reports",
-            "image": "/assets/images/advantages/detailed.webp"
+            "image": {
+                "src": "/assets/images/advantages/detailed.webp",
+                "alt": "Detailed reports"
+            }
         },
         {
             "title": "Convenient reminders",
-            "image": "/assets/images/advantages/convenient.webp"
+            "image": {
+                "src": "/assets/images/advantages/convenient.webp",
+                "alt": "Convenient reminders"
+            }
         }
     ]
 }

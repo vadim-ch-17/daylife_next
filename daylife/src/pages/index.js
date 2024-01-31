@@ -1,23 +1,21 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import dynamic from "next/dynamic";
 import Cookies from "js-cookie";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import wow from "@/libs/wow";
 import rellax from "@/libs/rellax";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Banner from "@/sections/Banner";
-import Advantages from "@/sections/Advantages";
-import TopSection from "@/sections/CallToActionSections/TopSection";
-import Product from "@/sections/Product";
-import BottomSection from "@/sections/CallToActionSections/BottomSection";
-import Testimonials from "@/sections/Testimonials";
 import Modal from "@/components/Modal";
-import { useModal } from "@/utils/context";
+import Sections from "@/sections";
+import { useModal } from "@/utils/context"
+
+
+
 
 export default function Home() {
   const { modalBody } = useModal();
-  const DynamicComponent = modalBody
+  const DynamicModalComponent = modalBody
     ? dynamic(() => import("@/components/" + modalBody))
     : null;
 
@@ -31,17 +29,12 @@ export default function Home() {
     <>
       <Header />
       <main className={`main`}>
-        <Banner />
-        <Advantages />
-        <TopSection />
-        <Product />
-        <BottomSection />
-        <Testimonials />
+        <Sections />
       </main>
       <Footer />
       {/* modal */}
       <Modal>
-        {DynamicComponent && <DynamicComponent />}
+        {DynamicModalComponent && <DynamicModalComponent />}
       </Modal>
     </>
   );
@@ -62,7 +55,8 @@ export async function getStaticProps({ locale }) {
         "product",
         "testimonials",
         "popups",
-      ])),
+      ]))
     },
   };
 }
+

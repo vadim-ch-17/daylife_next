@@ -1,10 +1,9 @@
 import { useTranslation } from "next-i18next";
 import Arrow from "@/components/Arrow";
 import Star from "@/components/Star";
+import StoreButtons from "@/components/StoreButtons";
 
-const { default: StoreButtons } = require("@/components/StoreButtons");
-
-const BottomSection = () => {
+const CallToActionBottom = () => {
   const { t } = useTranslation("action-sections");
   return (
     <div className="mb-[2.875rem] bg-secondary pb-[1.375rem] pt-[2.813rem] lg:mb-[6.125rem] xl:pb-[7.063rem] xl:pt-[7.063rem]">
@@ -96,4 +95,4 @@ const BottomSection = () => {
   );
 };
 
-export default BottomSection;
+export default CallToActionBottom;

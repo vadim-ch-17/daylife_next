@@ -3,7 +3,7 @@ import Star from "@/components/Star";
 import Arrow from "@/components/Arrow";
 import StoreButtons from "@/components/StoreButtons";
 
-const TopSection = () => {
+const CallToActionTop = () => {
   const { t } = useTranslation("action-sections");
 
   return (
@@ -117,4 +117,4 @@ const TopSection = () => {
   );
 };
 
-export default TopSection;
+export default CallToActionTop;

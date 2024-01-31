@@ -28,8 +28,8 @@ const Advantages = () => {
               >
                 <img
                   className="lg:max-w-auto mx-auto mb-8 max-h-[288px] md:mb-0"
-                  src={card.image}
-                  alt="Journal"
+                  src={card.image.src}
+                  alt={card.image.alt}
                 />
                 <p className="text-center text-xl font-bold text-primary">
                   {card.title}

@@ -20,11 +20,6 @@ module.exports = {
         lg: "992px",
         xl: "1200px",
         "2xl": "1400px",
-        // minsm: { min: "577px" },
-        // minmd: { min: "769px" },
-        // minlg: { min: "993px" },
-        // minxl: { min: "1201px" },
-        // min2xl: { min: "1401px" },
       },
       minHeight: {
         xxs: "24.125rem",

@@ -13,7 +13,7 @@ const Header = () => {
   const [isOpenNav, setIsOpenNav] = useState(false);
   const { setIsOpenModal, setModalBody } = useModal();
   const eventHundler = () => {
-    setIsOpenNav(!isOpen);
+    setIsOpenNav(!isOpenNav);
   };
   const openModal = () => {
     setModalBody("Download");

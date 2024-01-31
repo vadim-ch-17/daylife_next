@@ -12,7 +12,7 @@ const navList = [
   {
     name: "testimonials",
     path: "testimonials",
-    active: false,
+    active: true,
   },
   {
     name: "contact_us",
