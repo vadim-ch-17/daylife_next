@@ -96,18 +96,18 @@ const Banner = () => {
               <picture>
                 <source
                   media="(max-width: 700px)"
-                  srcSet={`${t("banner_img")}_700.webp`}
+                  srcSet={`${t("image.src")}_700.webp`}
                 />
                 <source
                   media="(max-width: 1000px)"
-                  srcSet={`${t("banner_img")}_1000.webp`}
+                  srcSet={`${t("image.src")}_1000.webp`}
                 />
                 <img
                   className="image absolute -bottom-[30px] right-[14%] max-h-[29.75rem] w-auto sm:right-[15%] sm:max-h-[25rem] md:right-[10%] md:max-h-[40rem] 2xl:right-[2%] 2xl:max-h-[46rem]"
                   data-rellax-speed="1"
                   data-rellax-min="5"
-                  src={`${t("banner_img")}_1200.webp`}
-                  alt="Banner"
+                  src={`${t("image.src")}_1200.webp`}
+                  alt={t("image.alt")}
                 />
               </picture>
             </CircleStyles>

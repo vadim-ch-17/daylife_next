@@ -1,10 +1,16 @@
 {
     "topSection": {
         "title": "Помогает вам управлять диабетом",
-        "image": "/assets/images/action_sections/ru/call_to_action.webp"
+        "image": {
+            "src": "/assets/images/action_sections/ru/call_to_action.webp",
+            "alt": "Помогает вам управлять диабетом"
+        }
     },
     "bottomSection": {
         "title": "Помогает вам управлять диабетом",
-        "image": "/assets/images/action_sections/ru/call_to_action_b_"
+        "image": {
+            "src": "/assets/images/action_sections/ru/call_to_action_b_",
+            "alt": "Помогает вам управлять диабетом"
+        }
     }
 }

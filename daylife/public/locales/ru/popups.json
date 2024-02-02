@@ -18,27 +18,37 @@
         "title": "Расскажите нам о ваших потребностях",
         "inputs": [
             {
+                "tag": "input",
                 "type": "text",
                 "name": "user-name",
-                "placeholder": "Имя",
-                "required": true
+                "label": "Имя",
+                "validation": {
+                    "type": "text",
+                    "require": "Пожалуйста, введите свое имя",
+                    "min": "Имя должно содержать не менее 2 символов"
+                }
             },
             {
+                "tag": "input",
                 "type": "email",
                 "name": "user-email",
-                "placeholder": "Электронная почта",
-                "required": true
+                "label": "Электронная почта",
+                "validation": {
+                    "type": "email",
+                    "require": "Пожалуйста, введите свой адрес электронной почты",
+                    "email": "Пожалуйста, введите действительный адрес электронной почты"
+                }
             },
             {
+                "tag": "textarea",
                 "type": "textarea",
                 "name": "user-message",
-                "placeholder": "Ваше сообщение",
-                "required": false
+                "label": "Ваше сообщение"
             },
             {
+                "tag": "input",
                 "type": "submit",
-                "value": "Отправить",
-                "required": true
+                "value": "Отправить"
             }
         ],
         "image": {

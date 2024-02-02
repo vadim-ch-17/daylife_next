@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import theme from "@/styles/theme";
 
 export const FigureStyles = styled.div`
   display: block;
@@ -17,7 +18,7 @@ export const FigureStyles = styled.div`
 
 export const CircleStyles = styled.div`
   overflow: hidden;
-  background-color: var(--primary-light-xl);
+  background-color: ${theme.colors.secondary};
   border-radius: 50%;
   position: absolute;
   z-index: -1;
@@ -47,7 +48,7 @@ export const BannerStyles = styled.div`
     &:after {
       content: "";
       position: absolute;
-      background-color: var(--primary-light-xl);
+      background-color: ${theme.colors.secondary};
       height: 50%;
       width: 100%;
       top: 0;

@@ -3,15 +3,15 @@ import { useState } from "react";
 import Navigation from "../Navigation";
 import Button from "../Button";
 import { FaArrowRightLong } from "react-icons/fa6";
-import { useModal } from "@/utils/context";
+import { useAppContext } from "@/utils/context";
 import LanguageSwitcher from "../LanguageSwitcher";
 import styles from "./Header.module.css";
 import Logo from "../Logo";
 
-const Header = () => {
+const Header = ({ emptyNav }) => {
   const { t } = useTranslation("button");
   const [isOpenNav, setIsOpenNav] = useState(false);
-  const { setIsOpenModal, setModalBody } = useModal();
+  const { setIsOpenModal, setModalBody } = useAppContext();
   const eventHundler = () => {
     setIsOpenNav(!isOpenNav);
   };
@@ -42,17 +42,18 @@ const Header = () => {
           className={`grid overflow-hidden lg:block lg:overflow-visible ${isOpenNav ? "" : "!grid-rows-[0fr]"} ${styles.transitionRows}`}
         >
           <div className="flex min-h-0 flex-col self-center justify-self-center lg:flex-row">
-            <Navigation
+            {!emptyNav && <Navigation
               classContainer={"flex flex-end flex-col lg:flex-row mr-0 lg:mr-6"}
               classItem={"mb-4 lg:mb-0"}
               classLink={" font-extrabold"}
               typeLinks={"dark"}
-            />
+            />}
             <LanguageSwitcher />
             <Button
               classes="flex justify-center items-center mb-3 lg:mb-0 ml-0 lg:ml-6 "
               type={"primary"}
               onClick={openModal}
+              hoverAnimation
             >
               {t("download_now")} <FaArrowRightLong className="ml-2.5" />
             </Button>

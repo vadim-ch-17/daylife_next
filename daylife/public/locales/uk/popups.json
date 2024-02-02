@@ -18,27 +18,37 @@
         "title": "Розкажіть нам про ваші потреби",
         "inputs": [
             {
+                "tag": "input",
                 "type": "text",
                 "name": "user-name",
-                "placeholder": "Ім'я",
-                "required": true
+                "label": "Ім'я",
+                "validation": {
+                    "type": "text",
+                    "require": "Введіть ім'я",
+                    "min": "Ім'я повинно містити не менше 2 символів"
+                }
             },
             {
+                "tag": "input",
                 "type": "email",
                 "name": "user-email",
-                "placeholder": "Електронна пошта",
-                "required": true
+                "label": "Електронна пошта",
+                "validation": {
+                    "type": "email",
+                    "require": "Введіть електронну пошту",
+                    "email": "Введіть коректну електронну пошту"
+                }
             },
             {
+                "tag": "textarea",
                 "type": "textarea",
                 "name": "user-message",
-                "placeholder": "Ваше повідомлення",
-                "required": false
+                "label": "Ваше повідомлення"
             },
             {
+                "tag": "input",
                 "type": "submit",
-                "value": "Відправити",
-                "required": true
+                "value": "Відправити"
             }
         ],
         "image": {

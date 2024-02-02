@@ -85,7 +85,7 @@ const CallToActionTop = () => {
           </div>
           <div className="h-full w-full overflow-hidden lg:overflow-visible">
             <div
-              className="phones img-parallax relative h-40 w-full lg:h-full "
+              className="phones img-parallax transition-transform duration-[6000ms] ease-[cubic-bezier(0, 1, 0.5, 1)] relative h-40 w-full lg:h-full "
               data-rellax-speed="1"
               data-rellax-percentage="0.5"
               data-rellax-min="0"
@@ -93,8 +93,8 @@ const CallToActionTop = () => {
               <img
                 className="lazy absolute top-0 max-h-[485px] lg:-top-[9rem] lg:right-0 lg:translate-x-0 xl:-top-2/6"
                 loading="lazy"
-                src={t("topSection.image")}
-                alt="phone"
+                src={t("topSection.image.src")}
+                alt={t("topSection.image.alt")}
               />
             </div>
           </div>

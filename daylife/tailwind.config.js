@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+// import colors from '@/styles/colors';
 module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -277,17 +278,17 @@ module.exports = {
             "font-size": "0.875rem"
           },
           to: {
-            top: "-0.5rem",
+            top: "0rem",
             "font-size": "0.625rem",
             color: "#6874dc"
           }
+        },
+        animation: {
+          zIndex: "0.7s linear 0.5s zIndex forwards",
+          "show-bottom": "0.5s linear show-bottom forwards",
         }
-      },
-      animation: {
-        zIndex: "0.7s linear 0.5s zIndex forwards",
-        "show-bottom": "0.5s linear show-bottom forwards",
-      },
-    },
+      }
+    }
   },
   plugins: [],
 };

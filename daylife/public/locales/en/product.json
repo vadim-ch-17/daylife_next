@@ -2,22 +2,34 @@
     "title": "Product",
     "subtitle": "About this app",
     "description": "On the main screen, you can quickly view data about glucose level, short and long insulin and calories",
-    "image": "/assets/images/product/en/product_",
+    "image": {
+        "src": "/assets/images/product/en/product_",
+        "alt": "Main screen the application"
+    },
     "cards": [
         {
             "title": "Diary",
             "description": "On this screen, you can view information about sugar, bread units, exercise and more for any given day.",
-            "image": "/assets/images/product/en/diary.webp"
+            "image": {
+                "src": "/assets/images/product/en/diary.webp",
+                "alt": "Diary screen the application"
+            }
         },
         {
             "title": "Analytics",
             "description": "The application provides convenient and detailed reports, graphs and statistics.",
-            "image": "/assets/images/product/en/analytics.webp"
+            "image": {
+                "src": "/assets/images/product/en/analytics.webp",
+                "alt": "Analytics screen the application"
+            }
         },
         {
             "title": "Notification",
             "description": "Do not worry about forgetting to measure your glucose level, take insulin or other medications, the application will remind you of this.",
-            "image": "/assets/images/product/en/notification.webp"
+            "image": {
+                "src": "/assets/images/product/en/notification.webp",
+                "alt": "Notification screen the application"
+            }
         }
     ]
 }

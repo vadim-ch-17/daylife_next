@@ -1,10 +1,16 @@
 {
     "topSection": {
         "title": "Допомагає вам керувати діабетом",
-        "image": "/assets/images/action_sections/uk/call_to_action.webp"
+        "image": {
+            "src": "/assets/images/action_sections/uk/call_to_action.webp",
+            "alt": "Допомагає вам керувати діабетом"
+        }
     },
     "bottomSection": {
         "title": "Допомагає вам керувати діабетом",
-        "image": "/assets/images/action_sections/uk/call_to_action_b_"
+        "image": {
+            "src": "/assets/images/action_sections/uk/call_to_action_b_",
+            "alt": "Допомагає вам керувати діабетом"
+        }
     }
 }

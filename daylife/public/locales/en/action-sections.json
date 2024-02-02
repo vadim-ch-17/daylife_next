@@ -1,10 +1,16 @@
 {
     "topSection": {
         "title": "Helps you manage your diabetes",
-        "image": "/assets/images/action_sections/en/call_to_action.webp"
+        "image": {
+            "src": "/assets/images/action_sections/en/call_to_action.webp",
+            "alt": "Helps you manage your diabetes"
+        }
     },
     "bottomSection": {
         "title": "Helps you manage your diabetes",
-        "image": "/assets/images/action_sections/en/call_to_action_b_"
+        "image": {
+            "src": "/assets/images/action_sections/en/call_to_action_b_",
+            "alt": "Helps you manage your diabetes"
+        }
     }
 }

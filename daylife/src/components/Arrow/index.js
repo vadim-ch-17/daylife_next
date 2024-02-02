@@ -1,6 +1,7 @@
 import React from "react";
 import useIntersectionObserver from "@/hooks/intersectionObserver";
 import arrowsType from "./const";
+import { ArrowContainer } from "@/components/Arrow/style";
 const Arrow = ({
   classContainer,
   type,
@@ -19,7 +20,7 @@ const Arrow = ({
   });
 
   return (
-    <div className={classContainer}>
+    <ArrowContainer className={classContainer}>
       <div className="arrow-under absolute">
         <svg
           ref={ref}
@@ -46,7 +47,7 @@ const Arrow = ({
         className="arrow absolute"
         dangerouslySetInnerHTML={{ __html: arrowsType[type] }}
       ></div>
-    </div>
+    </ArrowContainer>
   );
 };
 

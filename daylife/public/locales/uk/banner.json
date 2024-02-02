@@ -2,5 +2,8 @@
     "title": "Візьміть ваш діабет під контроль",
     "description": "DayLife - це мобільний застосунок, розроблений для того, щоб зробити життя людей з діабетом простішим",
     "recomend": "Скачати застосунок",
-    "banner_img": "/assets/images/banner/uk/banner"
+    "image": {
+        "src": "/assets/images/banner/uk/banner",
+        "alt": "DayLife"
+    }
 }

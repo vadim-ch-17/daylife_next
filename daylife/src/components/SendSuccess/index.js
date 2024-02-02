@@ -1,9 +1,9 @@
 import { useTranslation } from "next-i18next";
-import { useModal } from "@/utils/context";
+import { useAppContext } from "@/utils/context";
 import Button from "../Button";
 const SendSuccess = () => {
     const { t } = useTranslation("popups");
-    const { setIsOpenModal } = useModal();
+    const { setIsOpenModal } = useAppContext();
     return (
         <div className="content">
             <div className="image md-7 lg:mb-14">
@@ -16,7 +16,7 @@ const SendSuccess = () => {
                 <span className="text-primary font-semibold lg:font-bold text-lg lg:text-xl">{t("success.subtitle")}</span>
             </div>
             <div className="text-center mb-10 lg:mb-20">
-                <Button classes="text-white min-w-[193px] h-[3.625rem] bg-visited rounded-[0.625rem] hover:cursor-pointer b hover:bg-white border-[1px] hover:text-visited border-visited transition duration-300 mx-auto" onClick={() => setIsOpenModal(false)}>{t("success.button")}</Button>
+                <Button hoverAnimation classes="text-white min-w-[193px] h-[3.625rem] bg-visited rounded-[0.625rem] hover:cursor-pointer hover:bg-white border-[1px] hover:text-visited border-visited transition duration-300 mx-auto" onClick={() => setIsOpenModal(false)}>{t("success.button")}</Button>
             </div>
         </div>
     )

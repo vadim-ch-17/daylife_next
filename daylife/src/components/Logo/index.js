@@ -6,10 +6,10 @@ import Button from '../Button';
 
 const Logo = ({ src, classLogoTitle, classContainer, classImg, ...props }) => {
     const { asPath, defaultLocale, locale } = useRouter()
-    let path = defaultLocale === locale ? asPath : asPath + locale
+    let path = defaultLocale === locale ? '/' : '/' + locale
 
     useEffect(() => {
-        path = defaultLocale === locale ? asPath : asPath + locale
+        path = defaultLocale === locale ? '/' : '/' + locale
     }, [asPath, defaultLocale, locale])
 
     return (

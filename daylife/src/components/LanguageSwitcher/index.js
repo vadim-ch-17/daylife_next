@@ -29,9 +29,9 @@ const LanguageSwitcher = ({ classContainer, ...props }) => {
                 {Object.keys(languages).map((language) => (
                     <li
                         key={language}
-                        className='px-[10px] py-1 mb-[10px] rounded-[3px] hover:bg-lightprimaryactive'
+                        className=' mb-[10px]'
                     >
-                        <Button onClick={() => changeLanguage(language)} classes={`text-left text-sm ${language === i18n.language ? 'font-extrabold' : 'font-medium'} text-primary`}><span className='hidden lg:block'>{languages[language]}</span><span className='lg:hidden block'>{language}</span></Button>
+                        <Button onClick={() => changeLanguage(language)} classes={`text-left px-[10px] py-1 rounded-[3px] hover:bg-lightprimaryactive h-full w-full text-sm ${language === i18n.language ? 'font-extrabold' : 'font-medium'} text-primary`}><span className='hidden lg:block'>{languages[language]}</span><span className='lg:hidden block'>{language}</span></Button>
                     </li>
                 ))}
             </ul>

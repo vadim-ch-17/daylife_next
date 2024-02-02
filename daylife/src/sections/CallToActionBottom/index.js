@@ -12,13 +12,13 @@ const CallToActionBottom = () => {
           <picture>
             <source
               media="(max-width: 992px)"
-              srcSet={`${t("bottomSection.image")}mob.webp`}
+              srcSet={`${t("bottomSection.image.src")}mob.webp`}
             />
             <img
               className="mx-auto lg:absolute lg:right-0 lg:top-1/2 lg:max-h-[360px] lg:-translate-y-[55%] "
               loading="lazy"
-              src={`${t("bottomSection.image")}desk.webp`}
-              alt="Product structure"
+              src={`${t("bottomSection.image.src")}desk.webp`}
+              alt={t("bottomSection.image.alt")}
             />
           </picture>
         </div>

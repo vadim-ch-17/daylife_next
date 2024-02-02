@@ -4,6 +4,9 @@ const { i18n } = pkg;
 const nextConfig = {
   i18n,
   reactStrictMode: true,
+  compiler: {
+    styledComponents: true,
+  },
 };
 
 export default nextConfig;

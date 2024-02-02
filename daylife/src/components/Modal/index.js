@@ -1,10 +1,10 @@
 import React from "react";
-import { useModal } from "@/utils/context";
+import { useAppContext } from "@/utils/context";
 import { FaXmark } from "react-icons/fa6";
 import Button from "../Button";
 
 const Modal = ({ children }) => {
-  const { isOpenModal, setIsOpenModal } = useModal();
+  const { isOpenModal, setIsOpenModal } = useAppContext();
 
   if (!setIsOpenModal) {
     return null;

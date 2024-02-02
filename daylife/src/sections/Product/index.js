@@ -2,12 +2,12 @@ import Star from "@/components/Star";
 import { useTranslation } from "next-i18next";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Button from "@/components/Button";
-import { useModal } from "@/utils/context";
+import { useAppContext } from "@/utils/context";
 
 const Product = () => {
   const { t } = useTranslation(["product", "button"]);
   const cards = t("cards", { returnObjects: true });
-  const { setModalBody, setIsOpenModal } = useModal();
+  const { setModalBody, setIsOpenModal } = useAppContext();
 
   const handleOpenModal = () => {
     setModalBody("Download");
@@ -38,24 +38,24 @@ const Product = () => {
       </div>
       <div className="app-structure">
         <div
-          className="img-parallax mx-auto mb-[3.55rem] md:mb-[10.125rem] "
+          className="img-parallax transition-transform duration-[6000ms] ease-[cubic-bezier(0, 1, 0.5, 1)] mx-auto mb-[3.55rem] md:mb-[10.125rem] "
           data-rellax-min="-5"
           data-rellax-max="50"
         >
           <picture>
             <source
               media="(max-width: 700px)"
-              srcSet={`${t("image")}500.webp`}
+              srcSet={`${t("image.src")}500.webp`}
             />
             <source
               media="(max-width: 1000px)"
-              srcSet={`${t("image")}1000.webp`}
+              srcSet={`${t("image.src")}1000.webp`}
             />
             <img
               className="mx-auto"
               loading="lazy"
-              src={`${t("image")}1400.webp`}
-              alt="Product structure"
+              src={`${t("image.src")}1400.webp`}
+              alt={t("image.alt")}
             />
           </picture>
         </div>
@@ -71,7 +71,7 @@ const Product = () => {
                 className={`images relative ${idx % 2 === 0 ? "order-2  md:order-1" : "order-2  md:order-2"}`}
               >
                 <div
-                  className="img-parallax wow animated"
+                  className="img-parallax transition-transform duration-[6000ms] ease-[cubic-bezier(0, 1, 0.5, 1)] wow animated"
                   data-rellax-min="-60"
                   data-rellax-max="40"
                 >
@@ -113,8 +113,8 @@ const Product = () => {
                   <img
                     className="img lazy"
                     loading="lazy"
-                    src={card.image}
-                    alt={card.title}
+                    src={card.image.src}
+                    alt={card.image.alt}
                   />
                 </div>
               </div>
@@ -141,6 +141,7 @@ const Product = () => {
                     onClick={handleOpenModal}
                     classes="btn download-app large dark h-[3.125rem] !px-[1.4rem] text-white transition-colors md:h-[4.125rem] md:!px-[2rem]"
                     type={"primary"}
+                    hoverAnimation
                   >
                     {t("button:download_app")}
                     <FaArrowRightLong className="icon-arrow ml-2.5" />

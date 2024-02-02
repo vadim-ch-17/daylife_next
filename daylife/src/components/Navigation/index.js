@@ -1,7 +1,7 @@
 import navList from "./navList";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
-import { useModal } from "@/utils/context";
+import { useAppContext } from "@/utils/context";
 
 const Navigation = ({
   classContainer,
@@ -11,7 +11,7 @@ const Navigation = ({
   ...props
 }) => {
   const { t } = useTranslation("navigation");
-  const { setIsOpenModal, setModalBody } = useModal();
+  const { setIsOpenModal, setModalBody } = useAppContext();
 
   const styleItems = {
     dark: " visited:text-primary text-primary hover:text-active active:text-active",

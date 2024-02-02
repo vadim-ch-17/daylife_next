@@ -16,7 +16,7 @@ export default async function handler(req, res) {
     try {
       await transporter.sendMail({
         from: process.env.EMAIL_USERNAME,
-        to: 'chvs@codevery.com',
+        to: process.env.EMAIL_TO,
         subject: `New message from ${name}`,
         text: message,
         // replyTo: email,

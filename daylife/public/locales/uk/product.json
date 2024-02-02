@@ -2,22 +2,34 @@
     "title": "Продукт",
     "subtitle": "Про цей додаток",
     "description": "На головному екрані можна швидко переглядати данні про рівень глюкози, короткий і довгий інсулін та калорії.",
-    "image": "/assets/images/product/ru/product_",
+    "image": {
+        "src": "/assets/images/product/ru/product_",
+        "alt": "Головний екран"
+    },
     "cards": [
         {
             "title": "Щоденник",
             "description": "На цьому екрані можна переглядати відомості про цукор, хлібні одиниці, заняття спортом та інше за будь який день.",
-            "image": "/assets/images/product/uk/diary.webp"
+            "image": {
+                "src": "/assets/images/product/uk/diary.webp",
+                "alt": "Щоденник"
+            }
         },
         {
             "title": "Аналітика",
             "description": "Застосунок надає зручні та докладні звіти, графіки та статистику.",
-            "image": "/assets/images/product/uk/analytics.webp"
+            "image": {
+                "src": "/assets/images/product/uk/analytics.webp",
+                "alt": "Аналітика"
+            }
         },
         {
             "title": "Сповіщення",
             "description": "Не турбуйтесь про те, що забули заміряти рівень глюкози, прийняти інсулін або інші ліки, застосунок вам нагадає про це.",
-            "image": "/assets/images/product/uk/notification.webp"
+            "image": {
+                "src": "/assets/images/product/uk/notification.webp",
+                "alt": "Сповіщення"
+            }
         }
     ]
 }

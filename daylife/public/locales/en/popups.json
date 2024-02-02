@@ -18,27 +18,37 @@
         "title": "Tell us about your needs",
         "inputs": [
             {
+                "tag": "input",
                 "type": "text",
                 "name": "user-name",
-                "placeholder": "Name",
-                "required": true
+                "label": "Name",
+                "validation": {
+                    "type": "text",
+                    "require": "Please enter your name",
+                    "min": "Your name must be at least 2 characters long"
+                }
             },
             {
+                "tag": "input",
                 "type": "email",
                 "name": "user-email",
-                "placeholder": "Email",
-                "required": true
+                "label": "Email",
+                "validation": {
+                    "type": "email",
+                    "require": "Please enter a valid email address",
+                    "email": "Please enter a valid email address"
+                }
             },
             {
+                "tag": "textarea",
                 "type": "textarea",
                 "name": "user-message",
-                "placeholder": "Message",
-                "required": false
+                "label": "Message"
             },
             {
+                "tag": "input",
                 "type": "submit",
-                "value": "Send",
-                "required": true
+                "value": "Send"
             }
         ],
         "image": {
