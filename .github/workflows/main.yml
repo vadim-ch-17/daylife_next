@@ -41,8 +41,6 @@ jobs:
         # Your deployment script or commands go 
         npm install
         npm run build
-    - name: Send to server
-      run: |
         rsync -avz ./dist/ -p ${{ secrets.SSH_PASSWORD }} scp -r -p 22 ./dist/* ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/chvs/daynext/public_html/
       working-directory: daylife/
       
