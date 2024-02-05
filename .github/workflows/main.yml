@@ -19,17 +19,21 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: 20
-    - name: List files
-      run: ls -la
+
     - name: Install dependencies
       run: npm install
       working-directory: daylife/
 
   deploy:
     runs-on: ubuntu-latest
+    
     needs: build
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 1
     - name: List files
       run: ls -la
     - name: Deploy to production
