@@ -1,0 +1,68 @@
+{
+    "download": {
+        "title": "Скачайте приложение!",
+        "images": [
+            {
+                "src": "/assets/images/popups/qr.webp",
+                "alt": "Download on the App Store",
+                "link": "https://itunes.apple.com/us/app/your-app-name/id123456789?ls=1&mt=8"
+            },
+            {
+                "src": "/assets/images/popups/qr.webp",
+                "alt": "Get it on Google Play",
+                "link": "https://play.google.com/store/apps/details?id=com.your.app"
+            }
+        ]
+    },
+    "form": {
+        "title": "Расскажите нам о ваших потребностях",
+        "inputs": [
+            {
+                "tag": "input",
+                "type": "text",
+                "name": "user-name",
+                "label": "Имя",
+                "validation": {
+                    "type": "text",
+                    "require": "Пожалуйста, введите свое имя",
+                    "min": "Имя должно содержать не менее 2 символов"
+                }
+            },
+            {
+                "tag": "input",
+                "type": "email",
+                "name": "user-email",
+                "label": "Электронная почта",
+                "validation": {
+                    "type": "email",
+                    "require": "Пожалуйста, введите свой адрес электронной почты",
+                    "email": "Пожалуйста, введите действительный адрес электронной почты"
+                }
+            },
+            {
+                "tag": "textarea",
+                "type": "textarea",
+                "name": "user-message",
+                "label": "Ваше сообщение"
+            },
+            {
+                "tag": "input",
+                "type": "submit",
+                "value": "Отправить"
+            }
+        ],
+        "image": {
+            "src": "/assets/images/popups/send_msg.webp",
+            "alt": "Send us a message"
+        }
+    },
+    "success": {
+        "title": "Спасибо!",
+        "subtitle": "Ваше сообщение было отправлено успешно",
+        "button": "OK",
+        "image": {
+            "src": "/assets/images/popups/thank_you_page.webp",
+            "alt": "Success"
+        }
+    }
+}

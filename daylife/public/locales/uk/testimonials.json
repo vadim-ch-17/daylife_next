@@ -1,0 +1,47 @@
+{
+    "title": "Відгуки",
+    "description": "Що говорять наші користувачі",
+    "read_more": "Читати більше",
+    "reviews": [
+        {
+            "name": "John Doe",
+            "user_avatar": "/assets/images/testimonials/user1.png",
+            "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi.",
+            "rating": 4,
+            "diabetes_type": "Тип діабету 1"
+        },
+        {
+            "name": "Jane Doe",
+            "user_avatar": "/assets/images/testimonials/user2.png",
+            "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi.",
+            "rating": 5,
+            "diabetes_type": "Тип діабету 2"
+        },
+        {
+            "name": "John Doe",
+            "user_avatar": "/assets/images/testimonials/user3.png",
+            "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi.",
+            "rating": 4,
+            "diabetes_type": "Тип діабету 1"
+        },
+        {
+            "name": "Jane Doe",
+            "user_avatar": "/assets/images/testimonials/user4.webp",
+            "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi.",
+            "rating": 5,
+            "diabetes_type": "Тип діабету 2"
+        },
+        {
+            "name": "John Doe",
+            "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi.",
+            "rating": 4,
+            "diabetes_type": "Тип діабету 1"
+        },
+        {
+            "name": "Jane Doe",
+            "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi.",
+            "rating": 5,
+            "diabetes_type": "Тип діабету 55"
+        }
+    ]
+}
