@@ -41,7 +41,8 @@ jobs:
         # Your deployment script or commands go 
         npm install
         npm run build
-        ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
-        sshpass -p ${{ secrets.SSH_PASSWORD }} scp -r -p 22 ./dist/* ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/chvs/daynext/public_html/
+    - name: Send to server
+      run: |
+        rsync -avz ./dist/ -p ${{ secrets.SSH_PASSWORD }} scp -r -p 22 ./dist/* ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/chvs/daynext/public_html/
       working-directory: daylife/
       
