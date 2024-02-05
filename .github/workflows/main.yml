@@ -34,4 +34,4 @@ jobs:
         npm run build
         apt-get update && apt-get install -y sshpass
         sshpass -p ${{ secrets.SSH_PASSWORD }} scp -r -p 22 ./dist/* ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/chvs/daynext/public_html/
-      #working-directory: daylife/
+      working-directory: daylife/
