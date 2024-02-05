@@ -40,7 +40,7 @@ jobs:
       run: |
         # Your deployment script or commands go 
         ls -la
-        rsync -avz -e "sshpass -p ${{ secrets.SSH_PASSWORD }} ssh -o StrictHostKeyChecking=no" ./daylife ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/chvs/daynext/public_html/
+        rsync -avz -e "sshpass -p ${{ secrets.SSH_PASSWORD }} ssh -o StrictHostKeyChecking=no" ./ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/chvs/daynext/public_html/
       working-directory: daylife/
     - name: Install dependencies, build and start the app on the server
       run: |
