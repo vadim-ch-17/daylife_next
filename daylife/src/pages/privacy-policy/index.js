@@ -3,7 +3,7 @@ import { useTranslation } from "next-i18next";
 import Cookies from "js-cookie";
 import Layout from "@/components/Layout"
 import { createElement } from "react";
-import { TitleStyles, ParagraphStyles } from "./styles/style";
+import { TitleStyles, ParagraphStyles } from "../../styles/privacy-policy/styles/style";
 
 export default function PrivacyPolicy() {
     const { t } = useTranslation("privacy");
