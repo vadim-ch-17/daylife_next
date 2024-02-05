@@ -56,15 +56,4 @@ export const BannerStyles = styled.div`
     }
   }
 
-  .banner-arrow {
-    path {
-      fill: #ffffff;
-    }
-  }
-
-  .arrow-container {
-    width: 258px;
-    height: 100%;
-    z-index: -1;
-  }
 `;

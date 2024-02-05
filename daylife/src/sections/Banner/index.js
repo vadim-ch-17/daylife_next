@@ -5,6 +5,7 @@ import Star from "@/components/Star";
 import Arrow from "@/components/Arrow";
 import { BannerStyles, FigureStyles, CircleStyles } from "./style";
 import StoreButtons from "@/components/StoreButtons";
+import theme from "@/styles/theme";
 
 const Banner = () => {
   const { t } = useTranslation("banner");
@@ -37,7 +38,7 @@ const Banner = () => {
           </div>
           <div className="block-arrow relative hidden max-w-[90%] pt-[3.75rem] text-right lg:block">
             <Arrow
-              classContainer="arrow-container absolute -bottom-[56%] right-[20%]"
+              classContainer="arrow-container absolute w-[258px] h-full z-under -bottom-[56%] right-[20%]"
               type={"banner"}
               svgStyles={{
                 "--fill": "none",
@@ -86,7 +87,7 @@ const Banner = () => {
           >
             <Star
               color={"trasparent"}
-              border={"#494b7d"}
+              border={theme.colors.primary}
               width={42}
               height={42}
             />
@@ -117,7 +118,7 @@ const Banner = () => {
             data-wow-delay="0.7s"
             data-wow-duration="0.5s"
           >
-            <Star width={29} height={29} color={"#494b7d"} />
+            <Star width={29} height={29} color={theme.colors.primary} />
           </div>
         </div>
       </div>
