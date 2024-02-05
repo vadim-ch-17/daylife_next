@@ -41,7 +41,7 @@ jobs:
         # Your deployment script or commands go 
         npm install
         npm run build
-        sudo apt-get update && apt-get install -y sshpass
+        ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
         sshpass -p ${{ secrets.SSH_PASSWORD }} scp -r -p 22 ./dist/* ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/chvs/daynext/public_html/
       working-directory: daylife/
       
