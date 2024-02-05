@@ -28,8 +28,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-
     steps:
+    - name: List files
+      run: ls -la
     - name: Deploy to production
       run: |
         # Your deployment script or commands go 
