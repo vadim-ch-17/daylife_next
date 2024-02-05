@@ -46,6 +46,7 @@ jobs:
         rsync -avz -e "sshpass -p ${{ secrets.SSH_PASSWORD }} ssh -o StrictHostKeyChecking=no" ./package*.json ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/chvs/daynext/public_html/
         rsync -avz -e "sshpass -p ${{ secrets.SSH_PASSWORD }} ssh -o StrictHostKeyChecking=no" ./next.config.mjs ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/chvs/daynext/public_html/
         rsync -avz -e "sshpass -p ${{ secrets.SSH_PASSWORD }} ssh -o StrictHostKeyChecking=no" ./public ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/chvs/daynext/public_html/
+      working-directory: daylife/
     - name: Install dependencies, build and start the app on the server
       run: |
         sshpass -p ${{ secrets.SSH_PASSWORD }} ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd /home/chvs/daynext/public_html && npm run start"
