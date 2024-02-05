@@ -13,7 +13,6 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
       with:
-        path: daylife/
         fetch-depth: 0
 
     - name: Set up Node.js
