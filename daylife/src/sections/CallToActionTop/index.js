@@ -17,7 +17,7 @@ const CallToActionTop = () => {
             {t("topSection.title")}
           </p>
           <div
-            className="wow fadeIn flex flex-col items-center justify-center gap-5 md:flex-row lg:justify-start"
+            className="wow fadeIn flex flex-wrap items-center justify-center gap-5 lg:justify-start"
             data-wow-delay="0s"
           >
             <StoreButtons type={"light"} />
@@ -91,7 +91,7 @@ const CallToActionTop = () => {
               data-rellax-min="0"
             >
               <img
-                className="lazy absolute top-0 max-h-[485px] lg:-top-[9rem] lg:right-0 lg:translate-x-0 xl:-top-2/6"
+                className="lazy absolute top-0 max-h-[485px] lg:right-0 lg:translate-x-0 lg:-top-2/4"
                 loading="lazy"
                 src={t("topSection.image.src")}
                 alt={t("topSection.image.alt")}

@@ -16,14 +16,25 @@ export const sendEmail = async (data) => {
 }
 export const createFormElement = ({ input, classes, idx = null, register }) => {
 
+    const setAttrsForElement = (attrs) => {
+        let arrtsElement = {}
+        for (const attr in attrs) {
+            arrtsElement[attr] = attrs[attr]
+        }
+
+        return arrtsElement
+    }
+
     const element = createElement(input.tag, {
         name: input.name,
         type: input.type ? input.type : 'text',
+        id: input.id ? input.id : input.name,
         ...(input.placeholder ? { placeholder: input.placeholder } : null),
         ...(input.value ? { value: input.value } : null),
         className: classes ? classes : null,
         ...(idx ? { key: idx } : null),
         ...(register ? { ...register } : null),
+        ...(input?.attrs ? { ...setAttrsForElement(input.attrs) } : '')
     })
     return element
 }

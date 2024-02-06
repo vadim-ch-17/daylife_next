@@ -43,7 +43,10 @@
                 "tag": "textarea",
                 "type": "textarea",
                 "name": "user-message",
-                "label": "Message"
+                "label": "Message",
+                "attrs": {
+                    "rows": "4"
+                }
             },
             {
                 "tag": "input",

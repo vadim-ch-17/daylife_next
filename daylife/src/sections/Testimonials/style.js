@@ -1,14 +1,6 @@
 import styled from "styled-components";
 
 export const TestimonialsStyles = styled.div`
-  .body {
-    .review.active {
-      display: -webkit-box;
-      -webkit-line-clamp: 4;
-      -webkit-box-orient: vertical;
-      transition: all 0.5s ease;
-    }
-  }
 
   .testimonials-container.container {
     @media screen and (max-width: 992px) {

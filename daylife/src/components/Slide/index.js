@@ -1,14 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "next-i18next";
 import Star from "../Star";
 import Button from "../Button";
 const Side = ({ testimonial }) => {
   const { t } = useTranslation("testimonials");
   const [readMore, setReadMore] = useState(false);
+  const [trimmedReview, setTrimmedReview] = useState('');
+
+  const setTrimWords = (str, n) => {
+    !readMore ? setTrimmedReview(str)
+      : setTimeout(() => {
+        setTrimmedReview(str.substring(0, n) + '...');
+      }, 500);
+  }
 
   const readMoreHundler = () => {
     setReadMore(!readMore);
+    setTrimWords(testimonial.review, 200)
   };
+
+  useEffect(() => {
+    setTrimmedReview(testimonial.review.substring(0, 200) + '...');
+  }, [testimonial]);
 
   return (
     <div className="flex-auto rounded-mediun bg-primary pb-[3.125rem] pl-[1.75rem] pr-[2.125rem] pt-[2.375rem] shadow-3xl">
@@ -61,15 +74,15 @@ const Side = ({ testimonial }) => {
         </div>
       </div>
       <div
-        className={`body grid overflow-hidden transition-gridRows duration-500 ${readMore ? "grid-rows-[1fr]" : "!grid-rows-[0.25fr] "}`}
+        className={`body grid overflow-hidden transition-all duration-500 ${readMore ? "grid-rows-[1fr]" : "!grid-rows-[0.25fr] "}`}
       >
         <p
-          className={`review ${readMore ? "" : "active"} font-base mb-3 min-h-[125px] overflow-hidden font-medium leading-[1.875rem] text-white`}
+          className={`review font-base mb-3 min-h-[125px] overflow-hidden font-medium leading-[1.875rem] text-white`}
         >
-          {testimonial.review}
+          {trimmedReview}
         </p>
       </div>
-      <Button classes="!text-gold visited:!text-gold" onClick={readMoreHundler}>
+      <Button classes="text-gold visited:!text-gold relative after:content-[''] after:absolute after:w-full after:h-[0.05em] after:bg-gold after:rounded-[5px] after:left-0 after:bottom-0 after:scale-0 after:transform after:origin-bottom-right after:transition-transform after:duration-500 after:ease-out hover:after:scale-100 hover:after:origin-bottom-left" onClick={readMoreHundler}>
         {t("read_more")}
       </Button>
     </div>

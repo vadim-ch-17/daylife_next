@@ -104,14 +104,12 @@ const Testimonials = () => {
         </div>
       </div>
       <div className="testimonials-container container">
-        {/* <div className="testimonials-slider"> */}
         <Slider {...settings} ref={sliderRef}>
           {rewiews.length &&
             rewiews.map((testimonial, idx) => (
               <Side key={idx} testimonial={testimonial} />
             ))}
         </Slider>
-        {/* </div> */}
       </div>
     </TestimonialsStyles>
   );

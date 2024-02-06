@@ -5,13 +5,14 @@ import Button from "../Button";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useAppContext } from "@/utils/context";
 import LanguageSwitcher from "../LanguageSwitcher";
-import styles from "./Header.module.css";
 import Logo from "../Logo";
+import { SpanStyle } from "./style";
 
 const Header = ({ emptyNav }) => {
   const { t } = useTranslation("button");
   const [isOpenNav, setIsOpenNav] = useState(false);
   const { setIsOpenModal, setModalBody } = useAppContext();
+
   const eventHundler = () => {
     setIsOpenNav(!isOpenNav);
   };
@@ -19,6 +20,7 @@ const Header = ({ emptyNav }) => {
     setModalBody("Download");
     setIsOpenModal(true);
   };
+
   return (
     <header className="sticky top-0 z-30 bg-white shadow-3xl">
       <nav className="container h-full justify-between py-0 lg:flex lg:py-5">
@@ -27,26 +29,29 @@ const Header = ({ emptyNav }) => {
             src={"/assets/images/logo.webp"}
             classLogoTitle={"text-primary ml-2.5"}
             classContainer={"flex"}
+            animate
           />
 
           <Button
             onClick={eventHundler}
-            classes={`block lg:hidden h-[17px] w-[22px] relative ${styles.burger} ${isOpenNav ? styles.open : ""}`}
+            classes={`block lg:hidden h-[17px] w-[22px] relative`}
           >
-            <span></span>
-            <span></span>
-            <span></span>
+            {Array.from({ length: 3 }).map((_, idx) => (
+              <SpanStyle key={idx} $top={idx} open={isOpenNav}></SpanStyle>
+            ))}
           </Button>
         </div>
         <div
-          className={`grid overflow-hidden lg:block lg:overflow-visible ${isOpenNav ? "" : "!grid-rows-[0fr]"} ${styles.transitionRows}`}
+          className={`grid overflow-hidden lg:block lg:overflow-visible ${isOpenNav ? "grid-rows-[1fr]" : "!grid-rows-[0fr]"} transition-all !duration-700}`}
         >
-          <div className="flex min-h-0 flex-col self-center justify-self-center lg:flex-row">
+          <div className="flex min-h-0 flex-col  justify-self-center lg:flex-row">
             {!emptyNav && <Navigation
               classContainer={"flex flex-end flex-col lg:flex-row mr-0 lg:mr-6"}
               classItem={"mb-4 lg:mb-0"}
               classLink={" font-extrabold"}
               typeLinks={"dark"}
+              isOpenNav={isOpenNav}
+              setIsOpenNav={setIsOpenNav}
             />}
             <LanguageSwitcher />
             <Button

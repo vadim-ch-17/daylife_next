@@ -255,7 +255,7 @@ module.exports = {
         100: "100",
       },
       keyframes: {
-        zIndex: {
+        align: {
           from: {
             "z-index": "-1",
           },
@@ -273,20 +273,20 @@ module.exports = {
         },
         topLabel: {
           from: {
-            top: "1.00rem",
+            top: "0px",
             color: "#949cb6",
             "font-size": "0.875rem"
           },
           to: {
-            top: "0rem",
+            top: "-24px",
             "font-size": "0.625rem",
             color: "#6874dc"
           }
-        },
-        animation: {
-          zIndex: "0.7s linear 0.5s zIndex forwards",
-          "show-bottom": "0.5s linear show-bottom forwards",
         }
+      },
+      animation: {
+        zIndex: "0.7s linear 0.5s align forwards",
+        "show-bottom": "0.5s linear show-bottom forwards",
       }
     }
   },

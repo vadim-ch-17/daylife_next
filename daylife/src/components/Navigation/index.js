@@ -2,12 +2,15 @@ import navList from "./navList";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import { useAppContext } from "@/utils/context";
+import { toAnchor } from "./componentUtils";
 
 const Navigation = ({
   classContainer,
   typeLinks,
   classItem,
   classLink,
+  isOpenNav,
+  setIsOpenNav,
   ...props
 }) => {
   const { t } = useTranslation("navigation");
@@ -19,21 +22,6 @@ const Navigation = ({
       " visited:text-white text-white hover:text-active active:text-active",
   };
 
-  const toAnchor = (e) => {
-    e.preventDefault();
-    const href = e.target.dataset.anchor;
-    const element = document.querySelector("#" + href);
-
-    if (element) {
-      const top = element.offsetTop;
-      window.scrollTo({
-        top: top - 120,
-        behavior: "smooth",
-      });
-    } else {
-      console.error(`Element with selector "${href}" not found`);
-    }
-  };
   const openModal = (e) => {
     e.preventDefault();
     setModalBody("Form");
@@ -51,7 +39,7 @@ const Navigation = ({
             >
               <Link
                 href={item.path}
-                onClick={item?.modal ? openModal : toAnchor}
+                onClick={item?.modal ? openModal : (e) => toAnchor(isOpenNav, setIsOpenNav, e)}
                 data-anchor={item?.path}
                 className={`nav-link link flex h-full items-center text-base uppercase transition-colors focus:outline-none ${typeLinks && styleItems[typeLinks] ? styleItems[typeLinks] : ""} ${classLink ? classLink : ""}`}
               >
