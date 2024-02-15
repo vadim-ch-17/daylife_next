@@ -4,7 +4,7 @@ import Image from "next/image";
 const StoreButtons = ({ type }) => {
   return (
     <>
-      <Button href="https://www.apple.com/app-store/" type={type} hoverAnimation>
+      <Button href="https://www.apple.com/app-store/" type={type} hoverAnimation label='App Store'>
         <Image
           className="mr-2 max-h-[36px]"
           src="/assets/images/icons/apple_icon.png"
@@ -22,7 +22,7 @@ const StoreButtons = ({ type }) => {
         </div>
         <span></span>
       </Button>
-      <Button href="https://play.google.com/store/games?pli=1" type={type} hoverAnimation>
+      <Button href="https://play.google.com/store/games?pli=1" type={type} hoverAnimation label='Google Play'>
         <Image
           className="mr-2 max-h-[36px]"
           src="/assets/images/icons/Google_Play_logo.png"

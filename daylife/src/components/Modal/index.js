@@ -24,6 +24,7 @@ const Modal = ({ children }) => {
         <div className="content">
           <div className="py-5 pr-5 text-right lg:py-8 lg:pr-8 ">
             <Button
+              label="close-modal"
               classes="close group border-[1px] rounded-md border-transparent hover:bg-primary bg-transparent transition-colors duration-300 text-primary visited:text-primary active:text-primary"
               onClick={() => setIsOpenModal(false)}
             >

@@ -31,7 +31,11 @@ const LanguageSwitcher = ({ classContainer, ...props }) => {
                         key={language}
                         className=' mb-[10px]'
                     >
-                        <Button onClick={() => changeLanguage(language)} classes={`text-left px-[10px] py-1 rounded-[3px] hover:bg-lightprimaryactive h-full w-full text-sm ${language === i18n.language ? 'font-extrabold' : 'font-medium'} text-primary`}><span className='hidden lg:block'>{languages[language]}</span><span className='lg:hidden block'>{language}</span></Button>
+                        <Button
+                            onClick={() => changeLanguage(language)}
+                            classes={`text-left px-[10px] py-1 rounded-[3px] hover:bg-lightprimaryactive h-full w-full text-sm ${language === i18n.language ? 'font-extrabold' : 'font-medium'} text-primary`}
+                            label='language-switcher'
+                        ><span className='hidden lg:block'>{languages[language]}</span><span className='lg:hidden block'>{language}</span></Button>
                     </li>
                 ))}
             </ul>

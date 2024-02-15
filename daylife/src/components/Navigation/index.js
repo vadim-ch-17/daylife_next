@@ -42,6 +42,7 @@ const Navigation = ({
                 onClick={item?.modal ? openModal : (e) => toAnchor(isOpenNav, setIsOpenNav, e)}
                 data-anchor={item?.path}
                 className={`nav-link link flex h-full items-center text-base uppercase transition-colors focus:outline-none ${typeLinks && styleItems[typeLinks] ? styleItems[typeLinks] : ""} ${classLink ? classLink : ""}`}
+                aria-label={t(item.name)}
               >
                 {t(item.name)}
               </Link>

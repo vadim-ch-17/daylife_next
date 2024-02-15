@@ -1,5 +1,5 @@
 import { createElement, useEffect, useRef } from "react";
-const Button = ({ children, type, href, hoverAnimation, classes, onClick, ...props }) => {
+const Button = ({ children, type, href, hoverAnimation, classes, onClick, label, ...props }) => {
   const buttonLike = href ? "a" : "button";
   const buttonRef = useRef(null);
 
@@ -67,6 +67,7 @@ const Button = ({ children, type, href, hoverAnimation, classes, onClick, ...pro
       className: `${typeButton} ${classes ? classes : ""}`,
       ...(href ? { href } : {}),
       onClick,
+      'aria-label': label,
       ...props,
     },
     hoverAnimation ? createElement("span", { className: `span group-hover:w-[225%] group-hover:h-[550px] -translate-x-2/4 -translate-y-2/4 ${type === 'primary' ? 'bg-primaryhover' : 'bg-lightprimaryhover'} overflow-hidden absolute block w-0 h-0 rounded-full z-under transition-all duration-300` }) : null,

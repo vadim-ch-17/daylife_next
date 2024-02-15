@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useTranslation } from "next-i18next";
 import Star from "../Star";
 import Button from "../Button";
+import ResponsiveImage from "../ResponsiveImage";
 const Side = ({ testimonial }) => {
   const { t } = useTranslation("testimonials");
   const [readMore, setReadMore] = useState(false);
@@ -29,10 +30,11 @@ const Side = ({ testimonial }) => {
         <div className="user mb-[0.875rem] flex w-full xl:mb-[0rem] xl:flex-row">
           <div className="image mr-[1.375rem] h-[4.125rem] w-[4.125rem]">
             {testimonial.user_avatar && (
-              <img
-                className="img-testimonial h-auto w-full rounded-small"
+              <ResponsiveImage
                 src={testimonial.user_avatar}
                 alt={testimonial.name}
+                classes="img-testimonial h-auto w-full rounded-small"
+                loadImg='lazy'
               />
             )}
           </div>
@@ -82,7 +84,10 @@ const Side = ({ testimonial }) => {
           {trimmedReview}
         </p>
       </div>
-      <Button classes="text-gold visited:!text-gold relative after:content-[''] after:absolute after:w-full after:h-[0.05em] after:bg-gold after:rounded-[5px] after:left-0 after:bottom-0 after:scale-0 after:transform after:origin-bottom-right after:transition-transform after:duration-500 after:ease-out hover:after:scale-100 hover:after:origin-bottom-left" onClick={readMoreHundler}>
+      <Button
+        label="read more"
+        classes="text-gold visited:!text-gold relative after:content-[''] after:absolute after:w-full after:h-[0.05em] after:bg-gold after:rounded-[5px] after:left-0 after:bottom-0 after:scale-0 after:transform after:origin-bottom-right after:transition-transform after:duration-500 after:ease-out hover:after:scale-100 hover:after:origin-bottom-left"
+        onClick={readMoreHundler}>
         {t("read_more")}
       </Button>
     </div>

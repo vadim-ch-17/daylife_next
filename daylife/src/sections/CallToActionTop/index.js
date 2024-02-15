@@ -2,6 +2,7 @@ import { useTranslation } from "next-i18next";
 import Star from "@/components/Star";
 import Arrow from "@/components/Arrow";
 import StoreButtons from "@/components/StoreButtons";
+import ResponsiveImage from "@/components/ResponsiveImage";
 
 const CallToActionTop = () => {
   const { t } = useTranslation("action-sections");
@@ -90,9 +91,9 @@ const CallToActionTop = () => {
               data-rellax-percentage="0.5"
               data-rellax-min="0"
             >
-              <img
-                className="lazy absolute top-0 max-h-[485px] lg:right-0 lg:translate-x-0 lg:-top-2/4"
-                loading="lazy"
+              <ResponsiveImage
+                classes={"lazy absolute top-0 max-h-[485px] lg:right-0 lg:translate-x-0 lg:-top-[75%]"}
+                loadImg={"lazy"}
                 src={t("topSection.image.src")}
                 alt={t("topSection.image.alt")}
               />

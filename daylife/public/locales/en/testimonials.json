@@ -5,21 +5,21 @@
     "reviews": [
         {
             "name": "John Doe 4",
-            "user_avatar": "/assets/images/testimonials/user1.png",
+            "user_avatar": "/assets/images/testimonials/user1.webp",
             "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi.",
             "rating": 4,
             "diabetes_type": "Diabet type 1"
         },
         {
             "name": "Jane Doe 3",
-            "user_avatar": "/assets/images/testimonials/user2.png",
+            "user_avatar": "/assets/images/testimonials/user2.webp",
             "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi.",
             "rating": 3,
             "diabetes_type": "Diabet type 2"
         },
         {
             "name": "John Doe 5",
-            "user_avatar": "/assets/images/testimonials/user3.png",
+            "user_avatar": "/assets/images/testimonials/user3.webp",
             "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, consequat nibh. Etiam non elit dui. Nullam vel eros sit amet arcu vestibulum accumsan in in leo. Fusce malesuada vulputate faucibus. Integer in hendrerit nisi.",
             "rating": 5,
             "diabetes_type": "Diabet type 1"

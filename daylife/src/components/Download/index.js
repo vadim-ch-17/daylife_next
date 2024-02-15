@@ -1,6 +1,6 @@
 import { useTranslation } from "next-i18next";
 import StoreButtons from "@/components/StoreButtons";
-
+import ResponsiveImage from "../ResponsiveImage";
 const Download = () => {
   const { t } = useTranslation("popups");
   const images = t("download.images", { returnObjects: true });
@@ -16,13 +16,12 @@ const Download = () => {
         <div className="qr mb-5 flex flex-col items-center justify-center gap-3 lg:mb-12 lg:flex-row lg:gap-8">
           {images.length &&
             images.map((image, index) => (
-              <img
+              <ResponsiveImage
                 key={index}
-                className="lazy w-[50%] shadow-2xl lg:w-auto"
-                loading="lazy"
+                classes={"lazy w-[50%] shadow-2xl lg:w-auto"}
+                loadImg={"lazy"}
                 src={image.src}
-                alt={image.alt}
-              />
+                alt={image.alt} />
             ))}
         </div>
         <div className="item-center flex flex-wrap justify-center gap-5 lg:gap-14">

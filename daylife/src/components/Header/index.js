@@ -35,6 +35,7 @@ const Header = ({ emptyNav }) => {
           <Button
             onClick={eventHundler}
             classes={`block lg:hidden h-[17px] w-[22px] relative`}
+            label="burger"
           >
             {Array.from({ length: 3 }).map((_, idx) => (
               <SpanStyle key={idx} $top={idx} open={isOpenNav}></SpanStyle>
@@ -59,6 +60,7 @@ const Header = ({ emptyNav }) => {
               type={"primary"}
               onClick={openModal}
               hoverAnimation
+              label="download app"
             >
               {t("download_now")} <FaArrowRightLong className="ml-2.5" />
             </Button>

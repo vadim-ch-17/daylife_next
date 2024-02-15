@@ -1,3 +1,4 @@
+import ResponsiveImage from "@/components/ResponsiveImage";
 import { useTranslation } from "next-i18next";
 const Advantages = () => {
   const { t } = useTranslation("advantages");
@@ -26,11 +27,11 @@ const Advantages = () => {
                 className="card wow fadeInUp min-w-none flex w-[296px] flex-col justify-between rounded-large bg-white pb-[2.513rem] pt-[1.563rem]  shadow-3xl md:min-h-438 md:w-auto md:min-w-[18.5rem] lg:min-w-342 lg:pb-[3.125rem]"
                 data-wow-delay={`${idx * 0.2}s`}
               >
-                <img
-                  className="lg:max-w-auto mx-auto mb-8 max-h-[288px] md:mb-0"
+                <ResponsiveImage
+                  classes="lg:max-w-auto mx-auto mb-8 max-h-[288px] md:mb-0"
+                  loadImg="lazy"
                   src={card.image.src}
-                  alt={card.image.alt}
-                />
+                  alt={card.image.alt} />
                 <p className="text-center text-xl font-bold text-primary">
                   {card.title}
                 </p>

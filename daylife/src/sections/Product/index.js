@@ -3,7 +3,7 @@ import { useTranslation } from "next-i18next";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Button from "@/components/Button";
 import { useAppContext } from "@/utils/context";
-
+import ResponsiveImage from "@/components/ResponsiveImage";
 const Product = () => {
   const { t } = useTranslation(["product", "button"]);
   const cards = t("cards", { returnObjects: true });
@@ -110,12 +110,11 @@ const Product = () => {
                       ></path>
                     </svg>
                   </div>
-                  <img
-                    className="img lazy"
-                    loading="lazy"
+                  <ResponsiveImage
                     src={card.image.src}
                     alt={card.image.alt}
-                  />
+                    classImg="img lazy"
+                    loadImg="lazy" />
                 </div>
               </div>
               <div
@@ -142,6 +141,7 @@ const Product = () => {
                     classes="btn download-app large dark h-[3.125rem] !px-[1.4rem] text-white transition-colors md:h-[4.125rem] md:!px-[2rem]"
                     type={"primary"}
                     hoverAnimation
+                    label={t("button:download_app")}
                   >
                     {t("button:download_app")}
                     <FaArrowRightLong className="icon-arrow ml-2.5" />

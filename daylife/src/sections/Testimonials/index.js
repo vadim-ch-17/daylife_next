@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Side from "@/components/Slide";
 import { TestimonialsStyles } from "./style";
+import Button from "@/components/Button";
 
 const Testimonials = () => {
   const { t } = useTranslation("testimonials");
@@ -88,18 +89,16 @@ const Testimonials = () => {
         </p>
         <div className="slider-arrows absolute right-0 top-[15%] hidden px-3 lg:flex">
           <div style={{ textAlign: "center" }}>
-            <button
-              onClick={slickPrev}
-              className="testimonials-btn button-prev color-primary hover:color-white group relative mr-[2.188rem] h-[3.875rem] w-[3.875rem] rounded-full border-2 border-primary bg-white visited:!border-primary hover:border-primaryhover hover:bg-primary active:!border-primary"
-            >
-              <FaArrowRightLong className=" icon-arrow absolute left-2/4 top-2/4 -translate-x-1/2 -translate-y-1/2 !rotate-180 text-[1.563rem] text-xl text-primary group-hover:text-white" />
-            </button>
-            <button
-              onClick={slickNext}
-              className="testimonials-btn button-next color-primary hover:color-white group relative h-[3.875rem] w-[3.875rem] rounded-full border-2 border-primary bg-white visited:!border-primary hover:border-primaryhover hover:bg-primary active:!border-primary"
-            >
-              <FaArrowRightLong className=" icon-arrow absolute left-2/4 top-2/4 -translate-x-1/2 -translate-y-1/2 text-[1.563rem] text-xl text-primary group-hover:text-white" />
-            </button>
+            {Array.from({ length: 2 }).map((_, idx) => (
+              <Button
+                key={idx}
+                onClick={idx === 0 ? slickPrev : slickNext}
+                label={idx === 0 ? "prev" : "next"}
+                classes="testimonials-btn button-prev color-primary hover:color-white group relative mr-[2.188rem] h-[3.875rem] w-[3.875rem] rounded-full border-2 border-primary bg-white visited:!border-primary hover:border-primaryhover hover:bg-primary active:!border-primary"
+              >
+                <FaArrowRightLong className={` icon-arrow absolute left-2/4 top-2/4 -translate-x-1/2 -translate-y-1/2 ${idx === 0 && '!rotate-180'} text-[1.563rem] text-xl text-primary group-hover:text-white`} />
+              </Button>
+            ))}
           </div>
         </div>
       </div>

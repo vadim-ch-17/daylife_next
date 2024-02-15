@@ -107,7 +107,7 @@ const Banner = () => {
                   className="image absolute -bottom-[30px] right-[14%] max-h-[29.75rem] w-auto sm:right-[15%] sm:max-h-[25rem] md:right-[10%] md:max-h-[40rem] 2xl:right-[2%] 2xl:max-h-[46rem]"
                   data-rellax-speed="1"
                   data-rellax-min="5"
-                  src={`${t("image.src")}_1200.webp`}
+                  src={`${t("image.src")}_1000.webp`}
                   alt={t("image.alt")}
                 />
               </picture>

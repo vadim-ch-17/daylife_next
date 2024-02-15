@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  nextjs:
+    container_name: chvs_dayLife
+    build:
+      context: /home/chvs/day-next/public_html
+      dockerfile: Dockerfile.prod
+    ports:
+      - "5000:3000"
+    environment:
+      FLASK_ENV: development

@@ -4,6 +4,7 @@ import { useAppContext } from "@/utils/context";
 import { createFormElement, sendEmail, validationForm } from "./componentUtils";
 import { yupResolver } from "@hookform/resolvers/yup"
 import Loader from "../Loader";
+import ResponsiveImage from "../ResponsiveImage";
 
 const ContantForm = () => {
   const { t } = useTranslation("popups");
@@ -52,8 +53,9 @@ const ContantForm = () => {
           </form>
         </div>
         <div className="image top-1/1 relative hidden justify-center lg:flex">
-          <img
-            className="mx-auto h-full max-h-xxs w-full max-w-xxs"
+          <ResponsiveImage
+            classes={"mx-auto h-full max-h-xxs w-full max-w-xxs"}
+            loadImg={"lazy"}
             src={t("form.image.src")}
             alt={t("form.image.alt")}
           />

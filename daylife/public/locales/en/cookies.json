@@ -1,0 +1,13 @@
+{
+    "content": "This site uses cookies and services for collecting technical data of visitors (data about IP-address, location, etc.) to ensure operability and improve the quality of service. By continuing to use our site, you automatically agree to the use of these technologies.",
+    "buttons": [
+        {
+            "title": "Accept",
+            "action": "accept"
+        },
+        {
+            "title": "View more",
+            "action": "view-more"
+        }
+    ]
+}

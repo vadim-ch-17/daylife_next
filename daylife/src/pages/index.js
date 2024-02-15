@@ -7,12 +7,17 @@ import wow from "@/libs/wow";
 import rellax from "@/libs/rellax";
 import Sections from "@/sections";
 import Layout from "@/components/Layout";
+import { useAppContext } from "@/utils/context";
 
 
-export default function Home() {
+export default function Home({ privacy }) {
   const { t } = useTranslation("meta");
+  const { setAcceptCookies } = useAppContext();
 
   useEffect(() => {
+    if (privacy) {
+      setAcceptCookies(privacy);
+    }
     if (typeof window !== "undefined") {
       wow();
       rellax();
@@ -33,7 +38,8 @@ export default function Home() {
 
 export async function getStaticProps({ locale }) {
   const selectedLanguage = Cookies.selectedLanguage || locale;
-
+  const privacy = Cookies.get("privacy");
+  const cacheControl = 'public, max-age=3600';
   return {
     props: {
       ...(await serverSideTranslations(selectedLanguage, [
@@ -47,8 +53,11 @@ export async function getStaticProps({ locale }) {
         "testimonials",
         "popups",
         "privacy",
-      ]))
+        "cookies"
+      ])),
+      privacy: privacy === "accepted",
     },
+    revalidate: 3600,
   };
 }
 
