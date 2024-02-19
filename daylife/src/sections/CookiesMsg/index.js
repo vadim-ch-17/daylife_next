@@ -28,8 +28,8 @@ const CookiesMsg = () => {
                     onClick={setAcceptPrivacy}
                     type={"light"}
                     label={buttons[0].title}
-                    classes="min-w-[130px] md:!w-full !text-sm md:!text-base mb-0 md:mb-2 mr-2 md:mr-0 !justify-center md:justify-start">{buttons[0].title}</Button>
-                <Link aria-label="Page privacy" className={`group bg-primary overflow-hidden relative z-[1] shadow-2xl border-[1px] border-white text-white ${router.pathname.includes('privacy-policy') ? 'hidden' : 'flex'} items-center px-[20px] min-h-[57px] rounded-[50px] hover:bg-hover active:bg-active  min-w-[130px] !bg-transparent small !text-sm md:!text-base !justify-center md:justify-start`} href={`/privacy-policy/`}>{buttons[1].title}</Link>
+                    classes="min-w-[122px] !text-sm md:!text-base mb-0 md:mb-2 mr-2 md:mr-0 !justify-center md:justify-start !min-h-[50px]">{buttons[0].title}</Button>
+                <Link aria-label="Page privacy" className={`group bg-primary overflow-hidden relative z-[1] shadow-2xl border-[1px] border-white text-white ${router.pathname.includes('privacy-policy') ? 'hidden' : 'flex'} items-center px-[20px] min-h-[50px] rounded-[50px] hover:bg-hover active:bg-active  min-w-[122px] !bg-transparent small !text-sm md:!text-base !justify-center md:justify-start`} href={`/privacy-policy/`}>{buttons[1].title}</Link>
             </div>
         </div>
     )

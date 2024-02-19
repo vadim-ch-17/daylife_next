@@ -11,8 +11,10 @@ import { useAppContext } from "@/utils/context";
 
 
 export default function Home({ privacy }) {
-  const { t } = useTranslation("meta");
+  const { t } = useTranslation(["meta", "navigation"]);
   const { setAcceptCookies } = useAppContext();
+  const navItems = t("navigation:items", { returnObjects: true });
+  const activeNavItems = navItems.filter(item => !item.active).map((item) => item.url);
 
   useEffect(() => {
     if (privacy) {
@@ -31,7 +33,7 @@ export default function Home({ privacy }) {
         <meta name="description" content={t('description')} />
         <meta name="keywords" content={t('keywords')} />
       </Head>
-      <Sections />
+      <Sections activeSection={activeNavItems} />
     </Layout>
   );
 }

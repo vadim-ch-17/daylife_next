@@ -43,7 +43,7 @@ const Header = ({ emptyNav }) => {
           </Button>
         </div>
         <div
-          className={`grid overflow-hidden lg:block lg:overflow-visible ${isOpenNav ? "grid-rows-[1fr]" : "!grid-rows-[0fr]"} transition-all !duration-700}`}
+          className={`grid overflow-hidden lg:flex lg:items-center lg:overflow-visible ${isOpenNav ? "grid-rows-[1fr]" : "!grid-rows-[0fr]"} transition-all !duration-700}`}
         >
           <div className="flex min-h-0 flex-col  justify-self-center lg:flex-row">
             {!emptyNav && <Navigation
@@ -56,7 +56,7 @@ const Header = ({ emptyNav }) => {
             />}
             <LanguageSwitcher />
             <Button
-              classes="flex justify-center items-center mb-3 lg:mb-0 ml-0 lg:ml-6 "
+              classes="flex justify-center items-center mb-3 lg:mb-0 ml-0 lg:ml-6 min-w-[182px] tracking-[.03em]"
               type={"primary"}
               onClick={openModal}
               hoverAnimation

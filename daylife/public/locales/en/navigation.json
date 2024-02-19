@@ -1,6 +1,29 @@
 {
-    "features": "Features",
-    "product": "Product",
-    "testimonials": "Testimonials",
-    "contact_us": "Contact Us"
+    "items": [
+        {
+            "id": 1,
+            "title": "Features",
+            "url": "features",
+            "active": true
+        },
+        {
+            "id": 2,
+            "title": "Product",
+            "url": "product",
+            "active": true
+        },
+        {
+            "id": 3,
+            "title": "Testimonials",
+            "url": "testimonials",
+            "active": false
+        },
+        {
+            "id": 4,
+            "title": "Contact Us",
+            "url": "#",
+            "active": true,
+            "modal": true
+        }
+    ]
 }

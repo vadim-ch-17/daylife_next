@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import { FaArrowRightLong } from "react-icons/fa6";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Side from "@/components/Slide";
+import Slide from "@/components/Slide";
 import { TestimonialsStyles } from "./style";
 import Button from "@/components/Button";
 
@@ -72,7 +72,7 @@ const Testimonials = () => {
   return (
     <TestimonialsStyles
       id="testimonials"
-      className="testimonials  mb-[0rem] pr-0 lg:mb-[5.675rem] "
+      className="testimonials  mb-[0rem] pr-0 lg:mb-[5.675rem] mt-[2.875rem] lg:mt-[6.125rem]"
     >
       <div className="container relative text-center lg:text-left">
         <p
@@ -106,7 +106,7 @@ const Testimonials = () => {
         <Slider {...settings} ref={sliderRef}>
           {rewiews.length &&
             rewiews.map((testimonial, idx) => (
-              <Side key={idx} testimonial={testimonial} />
+              <Slide key={idx} testimonial={testimonial} />
             ))}
         </Slider>
       </div>

@@ -23,7 +23,7 @@ const LanguageSwitcher = ({ classContainer, ...props }) => {
     return (
         <div className={`group hover:cursor-pointer flex justify-center relative ${classContainer ? classContainer : ''}`}>
             <p className='uppercase hidden lg:flex flex-nowrap items-center'>
-                <span className='mr-1 text-base transition-colors font-extrabold uppercase  text-primary group-hover:text-active '>{i18n.language}</span> <FaChevronDown className='transition-all text-primary duration-300 group-hover:rotate-180 group-hover:text-active' />
+                <span className='mr-[3px] text-base transition-colors font-extrabold uppercase  text-primary group-hover:text-active '>{i18n.language}</span> <FaChevronDown className='transition-all h-[14px] text-primary duration-300 group-hover:rotate-180 group-hover:text-active' />
             </p>
             <ul className='flex lg:flex-col flex-row relative lg:absolute opacity-100 lg:opacity-0 lg:invisible lg:left-2/4 lg:-translate-x-2/4 lg:translate-y-12 lg:py-4 px-2 lg:shadow-3xl lg:bg-white lg:rounded-md group-hover:visible group-hover:opacity-100'>
                 {Object.keys(languages).map((language) => (

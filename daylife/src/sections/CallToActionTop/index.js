@@ -9,10 +9,10 @@ const CallToActionTop = () => {
 
   return (
     <div className="mb-[2.875rem] bg-primary pb-0 pt-9 md:pt-16 lg:mb-[169px] lg:pb-20">
-      <div className="container mx-auto block grid-cols-[1fr_2fr] gap-x-2 px-3 lg:grid">
+      <div className="container mx-auto block grid-cols-[445px_2fr] gap-x-2 px-3 lg:grid">
         <div className="relative mb-11 lg:mb-0">
           <p
-            className="wow fadeIn mx-auto mb-9 w-9/12 text-center text-26 font-semibold text-white md:mb-14 md:text-4xl lg:w-full lg:text-left"
+            className="wow fadeIn mx-auto mb-9 w-9/12 text-center text-26 pr-0 md:pr-20 font-semibold text-white md:mb-14 md:text-4xl lg:w-full lg:text-left"
             data-wow-delay="0s"
           >
             {t("topSection.title")}
@@ -21,7 +21,7 @@ const CallToActionTop = () => {
             className="wow fadeIn flex flex-wrap items-center justify-center gap-5 lg:justify-start"
             data-wow-delay="0s"
           >
-            <StoreButtons type={"light"} />
+            <StoreButtons type={"light"} fontSize={'fontMeduim'} />
           </div>
           <Arrow
             classContainer={
@@ -61,7 +61,7 @@ const CallToActionTop = () => {
         </div>
         <div className="wow fadeIn relative" data-wow-delay="0s">
           <div
-            className="wow zoomIn absolute bottom-0 left-1/2 hidden lg:block"
+            className="wow zoomIn absolute bottom-0 left-[20%] hidden lg:block"
             data-wow-delay="0.5s"
             data-wow-duration="0.5s"
           >
@@ -73,7 +73,7 @@ const CallToActionTop = () => {
             />
           </div>
           <div
-            className="wow zoomIn absolute left-1/1 top-0 hidden lg:block"
+            className="wow zoomIn absolute left-[10%] top-0 hidden lg:block"
             data-wow-delay="0.8s"
             data-wow-duration="0.5s"
           >
@@ -92,7 +92,7 @@ const CallToActionTop = () => {
               data-rellax-min="0"
             >
               <ResponsiveImage
-                classes={"lazy absolute top-0 max-h-[485px] lg:right-0 lg:translate-x-0 lg:-top-[75%]"}
+                classes={"lazy absolute top-0 max-h-[485px] lg:right-[4%] lg:translate-x-0 lg:-top-[70%]"}
                 loadImg={"lazy"}
                 src={t("topSection.image.src")}
                 alt={t("topSection.image.alt")}

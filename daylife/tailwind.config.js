@@ -204,7 +204,7 @@ module.exports = {
           "24px",
           {
             letterSpacing: "0.03em",
-            lineHeight: "0px",
+            lineHeight: "20px",
           },
         ],
       },
@@ -290,5 +290,17 @@ module.exports = {
       }
     }
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.typography': {
+          display: '-webkit-box',
+          '-webkit-line-clamp': '4',
+          '-webkit-box-orient': 'vertical',
+          overflow: 'hidden',
+        },
+      }
+      addUtilities(newUtilities)
+    }
+  ],
 };

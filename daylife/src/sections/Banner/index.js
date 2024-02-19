@@ -34,7 +34,7 @@ const Banner = () => {
             className="banner-buttons item-center wow fadeIn flex flex-wrap justify-center gap-5 lg:justify-start"
             data-wow-delay="0.5s"
           >
-            <StoreButtons type={"primary"} />
+            <StoreButtons type={"primary"} classes={'min-w-[205px] min-h-[61px]'} fontSize={'fontBig'} />
           </div>
           <div className="block-arrow relative hidden max-w-[90%] pt-[3.75rem] text-right lg:block">
             <Arrow

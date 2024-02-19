@@ -3,26 +3,24 @@ import { useTranslation } from "next-i18next";
 import Star from "../Star";
 import Button from "../Button";
 import ResponsiveImage from "../ResponsiveImage";
-const Side = ({ testimonial }) => {
+
+const Slide = ({ testimonial }) => {
   const { t } = useTranslation("testimonials");
   const [readMore, setReadMore] = useState(false);
-  const [trimmedReview, setTrimmedReview] = useState('');
+  const [openRewiew, setOpenRewiew] = useState(false);
 
-  const setTrimWords = (str, n) => {
-    !readMore ? setTrimmedReview(str)
+  const setTrimWords = () => {
+    !readMore ? setOpenRewiew(true)
       : setTimeout(() => {
-        setTrimmedReview(str.substring(0, n) + '...');
+        setOpenRewiew(false);
       }, 500);
   }
 
   const readMoreHundler = () => {
     setReadMore(!readMore);
-    setTrimWords(testimonial.review, 200)
-  };
+    setTrimWords()
 
-  useEffect(() => {
-    setTrimmedReview(testimonial.review.substring(0, 200) + '...');
-  }, [testimonial]);
+  };
 
   return (
     <div className="flex-auto rounded-mediun bg-primary pb-[3.125rem] pl-[1.75rem] pr-[2.125rem] pt-[2.375rem] shadow-3xl">
@@ -79,9 +77,9 @@ const Side = ({ testimonial }) => {
         className={`body grid overflow-hidden transition-all duration-500 ${readMore ? "grid-rows-[1fr]" : "!grid-rows-[0.25fr] "}`}
       >
         <p
-          className={`review font-base mb-3 min-h-[125px] overflow-hidden font-medium leading-[1.875rem] text-white`}
+          className={`${openRewiew ? '' : 'typography'} review font-base mb-3 min-h-[125px] overflow-hidden font-medium leading-[1.875rem] text-white`}
         >
-          {trimmedReview}
+          {testimonial.review}
         </p>
       </div>
       <Button
@@ -94,4 +92,4 @@ const Side = ({ testimonial }) => {
   );
 };
 
-export default Side;
+export default Slide;

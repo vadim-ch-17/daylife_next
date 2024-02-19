@@ -6,7 +6,7 @@ import StoreButtons from "@/components/StoreButtons";
 const CallToActionBottom = () => {
   const { t } = useTranslation("action-sections");
   return (
-    <div className="mb-[2.875rem] bg-secondary pb-[1.375rem] pt-[2.813rem] lg:mb-[6.125rem] xl:pb-[7.063rem] xl:pt-[7.063rem]">
+    <div className=" bg-secondary pb-[1.375rem] pt-[2.813rem] xl:pb-[7.063rem] xl:pt-[7.063rem]">
       <div className="container relative mx-auto flex grid-cols-3 flex-col items-center px-3 lg:grid">
         <div className=" relative order-3 lg:order-1">
           <picture>
@@ -81,7 +81,7 @@ const CallToActionBottom = () => {
           className="lg:md-[0] item-center wow fadeIn relative order-2 mb-[0.938rem] flex flex-wrap justify-center gap-5 lg:order-3 lg:justify-start"
           data-wow-delay="0.5s"
         >
-          <StoreButtons type={"light"} />
+          <StoreButtons type={"light"} fontSize={'fontMeduim'} />
           <div
             className="xxl:-top-[100%] wow zoomIn absolute left-[30%] hidden lg:-top-[40%] lg:block xl:-top-[80%]"
             data-wow-delay="1s"

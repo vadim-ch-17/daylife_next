@@ -5,15 +5,22 @@ import Product from "./Product"
 import CallToActionBottom from "./CallToActionBottom"
 import Testimonials from "./Testimonials"
 
-const Sections = () => {
+const Sections = ({ activeSection }) => {
+    const sectionComponents = {
+        'banner': Banner,
+        'advantages': Advantages,
+        'callToActionTop': CallToActionTop,
+        'product': Product,
+        'callToActionBottom': CallToActionBottom,
+        'testimonials': Testimonials
+    }
+
     return (
         <>
-            <Banner />
-            <Advantages />
-            <CallToActionTop />
-            <Product />
-            <CallToActionBottom />
-            <Testimonials />
+            {Object.keys(sectionComponents).map((section, index) => {
+                const SectionComponent = sectionComponents[section]
+                if (!activeSection.includes(section)) return <SectionComponent key={index} />
+            })}
         </>
     )
 }

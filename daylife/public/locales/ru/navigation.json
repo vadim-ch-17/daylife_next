@@ -1,6 +1,29 @@
 {
-    "features": "Преимущества",
-    "product": "Продукт",
-    "testimonials": "Отзывы",
-    "contact_us": "Свяжитесь с нами"
+    "items": [
+        {
+            "id": 1,
+            "title": "Преимущества",
+            "url": "features",
+            "active": true
+        },
+        {
+            "id": 2,
+            "title": "Продукт",
+            "url": "product",
+            "active": true
+        },
+        {
+            "id": 3,
+            "title": "Отзывы",
+            "url": "testimonials",
+            "active": false
+        },
+        {
+            "id": 4,
+            "title": "Свяжитесь с нами",
+            "url": "#",
+            "active": true,
+            "modal": true
+        }
+    ]
 }

@@ -1,4 +1,3 @@
-import navList from "./navList";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import { useAppContext } from "@/utils/context";
@@ -14,6 +13,7 @@ const Navigation = ({
   ...props
 }) => {
   const { t } = useTranslation("navigation");
+  const navItems = t("items", { returnObjects: true });
   const { setIsOpenModal, setModalBody } = useAppContext();
 
   const styleItems = {
@@ -30,21 +30,21 @@ const Navigation = ({
 
   return (
     <ul className={classContainer}>
-      {navList.length &&
-        navList.map((item) => {
+      {navItems.length &&
+        navItems.map((item) => {
           return item.active ? (
             <li
-              key={item.name}
+              key={item.id}
               className={`ml-0 flex items-center justify-center lg:ml-4 xl:ml-10 ${classItem ? classItem : ""}`}
             >
               <Link
-                href={item.path}
+                href={item.url}
                 onClick={item?.modal ? openModal : (e) => toAnchor(isOpenNav, setIsOpenNav, e)}
-                data-anchor={item?.path}
+                data-anchor={item?.url}
                 className={`nav-link link flex h-full items-center text-base uppercase transition-colors focus:outline-none ${typeLinks && styleItems[typeLinks] ? styleItems[typeLinks] : ""} ${classLink ? classLink : ""}`}
-                aria-label={t(item.name)}
+                aria-label={t(item.title)}
               >
-                {t(item.name)}
+                {t(item.title)}
               </Link>
             </li>
           ) : null;
