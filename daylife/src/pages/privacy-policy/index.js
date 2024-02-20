@@ -15,7 +15,7 @@ export default function PrivacyPolicy() {
     }
 
     return (
-        <Layout emptyNav={true}>
+        <Layout emptyNav={false}>
             <h1 className="entry-title text-3xl font-extrabold md:text-5xl text-center !text-primary font-manrope pt-8 md:pt-12 my-6 md:my-14">{t("title")}</h1>
             <div className="container text-metal text-lg md:text-xl mb-16 md:mb-24">
                 {

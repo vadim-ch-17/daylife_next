@@ -10,7 +10,7 @@ const LanguageSwitcher = ({ classContainer, ...props }) => {
     const router = useRouter();
     const languages = {
         en: 'English',
-        uk: 'Українська',
+        ua: 'Українська',
         ru: 'Русский',
     }
 
