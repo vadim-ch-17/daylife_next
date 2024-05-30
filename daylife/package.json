@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint"
   },
@@ -15,6 +16,8 @@
     "js-cookie": "^3.0.5",
     "next": "14.1.0",
     "next-i18next": "^15.2.0",
+    "next-seo": "^6.5.0",
+    "next-sitemap": "^4.2.3",
     "nodemailer": "^6.9.8",
     "react": "^18",
     "react-dom": "^18",
@@ -23,6 +26,7 @@
     "react-router-dom": "^6.21.3",
     "react-slick": "^0.30.1",
     "rellax": "^1.12.1",
+    "sharp": "^0.33.3",
     "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.8",
     "wowjs": "^1.1.3",
